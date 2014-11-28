@@ -103,6 +103,7 @@ c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\css\index.css \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\img\logo.png \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\js\index.js \
+c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\js\jquery-2.1.1.min.js \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file \
