@@ -61,8 +61,6 @@ var app = {
              
             localImage = imageURI;
              
-            console.log(localImage);
-             
              document.getElementById('takePicture').innerHTML = "Hell's no, take another pic yo!"
         }, function(message) {
             alert('Failed because: ' + message);
@@ -86,8 +84,6 @@ var app = {
         //document.querySelector("#link").href = link;
             console.log(link);
 
-
-
             document.body.className = "uploaded";
         }
         // Ok, I don't handle the errors. An exercice for the reader.
@@ -95,63 +91,6 @@ var app = {
         /* And now, we send the formdata */
         xhr.send(fd);
         
-        
-        
-        
-        /*$.ajax({
-            url: 'https://api.imgur.com/3/image',
-            type: 'post',
-            headers: {
-                Authorization: 'Client-ID d0ab2f5655610b2'
-            },
-            data: {
-                image: localImage
-            },
-            dataType: 'jsonp',
-            success: function(response) {
-                if(response.success) {
-                    window.location = response.data.link;
-                }
-            }
-        });*/
-        
-        
-        
-        /*var fd = new FormData();
-        fd.append("image", localImage); // Append the file
-        fd.append("Client-ID", "cdc2b90b63b6cd99b64b95d4e35768f5bce9d4df");
-        // Get your own key: http://api.imgur.com/
-
-        // Create the XHR (Cross-Domain XHR FTW!!!)
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://api.imgur.com/3/image"); // Boooom!
-        xhr.onload = function() {
-        // Big win!
-        // The URL of the image is:
-        JSON.parse(xhr.responseText).upload.links.imgur_page;
-        }
-        // Ok, I don't handle the errors. An exercice for the reader.
-        // And now, we send the formdata
-        xhr.send(fd);*/
-       
-        
-        
-        
-        
-        
-        /*
-        $.ajax({ 
-            url: 'https://api.imgur.com/3/image',
-            headers: {
-                'Authorization': 'Client-ID d0ab2f5655610b2'
-            },
-            type: 'POST',
-            data: {
-                'image': localImage
-            },
-            success: function() { console.log('cool'); }
-        });
-        */
     }
     
 };
