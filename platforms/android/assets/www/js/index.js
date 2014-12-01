@@ -38,39 +38,66 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        
-        var picbtn = document.getElementById("takePicture");
-        picbtn.addEventListener("click",function(){
-            app.takeDatPicYo();    
-        },true);
-        
-        var uploadbtn = document.getElementById("uploadPicture");
-        uploadbtn.addEventListener("click",function(){
-            app.uploadDatPicYo();    
-        },true);
+        app.setUpButtonListeners();     
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         
     },
-    
+
+	setUpButtonListeners: function () {
+		 
+		var picbtn = document.getElementById("takePicture");
+        	picbtn.addEventListener("click",function(){
+            app.takeDatPicYo();    
+        },true);
+		
+		var uploadbtn = document.getElementById("uploadPicture");
+        	uploadbtn.addEventListener("click",function(){
+            app.uploadDatPicYo(); 
+			},true);
+			
+		var picAgainbtn = document.getElementById("takePictureAgain");
+        	picAgainbtn.addEventListener("click",function(){
+            app.takeDatPicYo();
+			},true);
+			
+			
+        var buttonBack = document.getElementsByClassName("back");
+        for (var i = 0; i < buttonBack.length; i++) {
+            buttonBack[i].addEventListener("click", function () {
+                app.goToMainPage();
+            }, true);
+        }
+	 },
+	 
+	 goToMainPage: function () {
+        var hidden = document.getElementById("addingNew");
+        var shown = document.getElementById("menu");
+        hidden.className = "hidden";
+        shown.className = "";
+    },
+	
     takeDatPicYo: function(){
+		
          navigator.camera.getPicture(function(imageURI) {
             var image = document.getElementById('myImage');
             image.src = "data:image/jpeg;base64," + imageURI;
              
             localImage = imageURI;
              
-             document.getElementById('takePicture').innerHTML = "Hell's no, take another pic yo!"
+			var hidden = document.getElementById("menu");
+        	var shown = document.getElementById("addingNew");
+       		hidden.className = "hidden";
+        	shown.className = "";
+             //document.getElementById('takePicture').innerHTML = "Hell's no, take another pic yo!"
         }, function(message) {
             alert('Failed because: ' + message);
         }, { destinationType: Camera.DestinationType.DATA_URL, 
             targetWidth: 200,
             targetHeight: 200 });
     },
-    
-    
-    
+		   
     uploadDatPicYo: function(){
         
         /* Lets build a FormData object*/
