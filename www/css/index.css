@@ -1,108 +1,187 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+ v2.0 | 20110126
+ License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
+del, dfn, em, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+figure, figcaption, footer, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  height: 100%;
+  overflow: hidden;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
-	line-height: 1;
+
 }
+
+.app{
+  background-color:#333333;
+}
+
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .hidden{
-    display: none;
+  display: none;
 }
 
 /***HEADER***/
 header{
-    color: #000000;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.47, #121212), color-stop(0.07, #454545));
-background: -webkit-linear-gradient(top, #454545 7%, #121212 47%);
-background: -moz-linear-gradient(top, #454545 7%, #121212 47%);
-background: -o-linear-gradient(top, #454545 7%, #121212 47%);
-background: -ms-linear-gradient(top, #454545 7%, #121212 47%);
-background: linear-gradient(to bottom, #454545 7%, #121212 47%);
-
-
-
-    height: 75px;
-    width: 100%;
+	color: #000000;
+	height: 130px;
+	width: 100%;
+	margin-bottom:40px;
 }
 
 header h1{
-    margin: 0 auto;
-    display: block;
-    text-align: center;
-    padding-top: 23px;
-    padding-bottom: 15px;
-    font-size: 33px;
-	color:#ffffff;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  padding-top: 23px;
+  font-size: 65px;
+  color:#ffffff;
+  text-shadow: 2px 2px #222222;
+  font-family: 'Oleo Script', cursive;
+}
+
+#headerwrd{
+	color:#ff5242;
 }
 
 header a{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-top: 30px;
-    right: 1%;
-	color:#ffffff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 30px;
+  right: 1%;
+  color:#ffffff;
 }
 
 .left{
-	left: 10%;
+  left: 10%;
+}
+
+header h2{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding-top: 11px;
+	font-size: 40px;
+	color:#ffffff;
+	text-shadow: 2px 2px #222222;
+	font-family: 'Oleo Script', cursive;
+}
+
+#navheader{
+	margin-bottom:0px;
+	height: 75px;
+	background-color:#2D2D2D;
 }
 
 /***BUTTONS***/
-.button{
-    background: #bdbdbd;
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#cacaca', endColorstr='#aeaeae'); /*  IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#cacaca), to(#aeaeae)); /*  WebKit */
-    background: -moz-linear-gradient(top,  #cacaca, #aeaeae);
-    border-color: #b5b5b5 #a1a1a1 #8f8f8f;
-    color: #555;
-    text-shadow: 0 1px 0 #d4d4d4;
-    -webkit-box-shadow: 0 1px 1px #c9c9c9, inset 0 1px 0 #d7d7d7;
-    -moz-box-shadow: 0 1px 1px #c9c9c9, inset 0 1px 0 #d7d7d7;
-    box-shadow: 0 1px 1px #c9c9c9, inset 0 1px 0 #d7d7d7; 
-	padding: 8px 5px;
-	margin: 18px 5px;
+.homebutton{
+	color: #ffffff;
+	border-color: 3px solid #333333;
+	background: #ff5242; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff5242 0%, #EA1E1E 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5242), color-stop(100%,#EA1E1E)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ff5242 0%,#EA1E1E 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5242', endColorstr='#EA1E1E',GradientType=0 ); /* IE6-9 */
 	
+	width: 140px;
+	height: 140px;
+	border: none;
+	outline:none;
+	border-radius:4px;
+	font-family: 'Oleo Script', cursive;
+	font-weight: 200;
+	
+	margin:8px;
+	padding:0px;
+	text-shadow:0px 2px 0px rgba(0, 0, 0, 0.4);
+	box-shadow: 2px 2px #222222;
+	font-size: 15px;
+}
+
+.button{
+	color: #ffffff;
+	border-color: 3px solid #333333;
+	background: #ff5242; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff5242 0%, #EA1E1E 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5242), color-stop(100%,#EA1E1E)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ff5242 0%,#EA1E1E 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5242', endColorstr='#EA1E1E',GradientType=0 ); /* IE6-9 */
+	
+	width: 140px;
+	height: 40px;
+	border: none;
+	outline:none;
+	border-radius:4px;
+	font-family: 'Oleo Script', cursive;
+	font-weight: 200;
+	
+	margin:8px;
+	padding:0px;
+	text-shadow:0px 2px 0px rgba(0, 0, 0, 0.4);
+	box-shadow: 2px 2px #222222;
+	font-size: 15px;v
+}
+
+#takePicture #getPicture{
+	float:right;
+	
+}
+
+#albumicture #prevPicture{
+	float:right;
+}
+
+.container {
+	text-align: center;
+}
+
+/***IMAGE***/
+#myImage{
+width:300px;
+margin-bottom:150px;
+-webkit-transform: rotate(90deg); 
+-moz-transform: rotate(90deg); 
+-o-transform: rotate(90deg);
+-ms-transform: rotate(90deg); 
+margin-top: 90px;
 }

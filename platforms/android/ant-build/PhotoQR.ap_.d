@@ -152,5 +152,4 @@ C:\Users\Jessica\MAD9135\photoqr\platforms\android\assets\www\plugins\org.apache
 C:\Users\Jessica\MAD9135\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
 C:\Users\Jessica\MAD9135\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
 C:\Users\Jessica\MAD9135\photoqr\platforms\android\assets\www\stylesheets\font-awesome.css \
-C:\Users\Jessica\MAD9135\photoqr\platforms\android\assets\www\stylesheets\style.css \
 C:\Users\Jessica\MAD9135\photoqr\platforms\android\ant-build\AndroidManifest.xml \

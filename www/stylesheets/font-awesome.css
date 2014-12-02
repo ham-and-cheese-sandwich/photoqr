@@ -116,7 +116,7 @@ a [class*=" icon-"] {
   border-radius: 4px;
 }
 .icon-3x {
-  font-size: 3em;
+  font-size: 5em;
 }
 .icon-3x.icon-border {
   border-width: 3px;
@@ -125,7 +125,7 @@ a [class*=" icon-"] {
   border-radius: 5px;
 }
 .icon-4x {
-  font-size: 4em;
+  font-size: 5em;
 }
 .icon-4x.icon-border {
   border-width: 4px;
