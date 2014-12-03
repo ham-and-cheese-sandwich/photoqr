@@ -99,8 +99,9 @@ var app = {
         }, function(message) {
             alert('Failed because: ' + message);
         }, { destinationType: Camera.DestinationType.DATA_URL, 
-            targetWidth: 200,
-            targetHeight: 200 });
+            targetWidth: 1000,
+            targetHeight: 1000,
+            correctOrientation:true});
     },
 		   
     uploadDatPicYo: function(){

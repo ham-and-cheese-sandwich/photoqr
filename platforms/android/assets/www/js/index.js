@@ -99,8 +99,9 @@ var app = {
         }, function(message) {
             alert('Failed because: ' + message);
         }, { destinationType: Camera.DestinationType.DATA_URL, 
-            targetWidth: 200,
-            targetHeight: 200 });
+            targetWidth: 1000,
+            targetHeight: 1000,
+            correctOrientation:true});
     },
 		   
     uploadDatPicYo: function(){
@@ -114,7 +115,7 @@ var app = {
         // Big win!    
             var link = JSON.parse(xhr.responseText).data.link;
         //document.querySelector("#link").href = link;
-            qrThisPic(link);
+            app.qrThisPic(link);
 
             document.body.className = "uploaded";
         }
