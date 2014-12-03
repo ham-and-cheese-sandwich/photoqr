@@ -152,5 +152,4 @@ c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cord
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\stylesheets\font-awesome.css \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\stylesheets\style.css \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\AndroidManifest.xml \
