@@ -33,8 +33,10 @@ int id history_detail 0x7f09001c
 int id history_title 0x7f09001b
 int id image_view 0x7f090017
 int id launch_product_query 0x7f090003
-int id menu_history_clear_text 0x7f090028
-int id menu_history_send 0x7f090027
+int id menu_encode 0x7f090028
+int id menu_history_clear_text 0x7f09002a
+int id menu_history_send 0x7f090029
+int id menu_share 0x7f090027
 int id meta_text_view 0x7f090011
 int id meta_text_view_label 0x7f090010
 int id page_number_view 0x7f090020

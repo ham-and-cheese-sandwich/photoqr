@@ -68,6 +68,11 @@ var app = {
             buttonBack[i].addEventListener("click", function () {
                 app.goToMainPage();
             }, true);
+            
+        var decodebtn = document.getElementById("getPicture");
+        decodebtn.addEventListener("click",function(){
+            app.picThisQr();
+        },true);
         }
 	 },
 	 
@@ -109,7 +114,7 @@ var app = {
         // Big win!    
             var link = JSON.parse(xhr.responseText).data.link;
         //document.querySelector("#link").href = link;
-            console.log(link);
+            qrThisPic(link);
 
             document.body.className = "uploaded";
         }
@@ -118,6 +123,63 @@ var app = {
         /* And now, we send the formdata */
         xhr.send(fd);
         
+    },
+    
+    qrThisPic: function(imgUrl){
+        //Encodes
+        cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, imgUrl, function(success)          {
+            //On successful Encoding, it will display it to share.
+            alert("encoding success: " + success);
+          }, function(fail) {
+            alert("encoding failed: " + fail);
+          }
+        );
+        
+    },
+    picThisQr: function(){
+    cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          
+          //These get the link's details
+          //Splits via '.', seperating the main domain's link, and final extension
+          var resultChecker = result.text.split(".");
+          //pop gets the final extension to determine the image type.
+          var imageType = resultChecker.pop();
+          //pop again to get the file name
+          var fileName = resultChecker.pop();
+          // get rid of the '/'
+          fileName = fileName.split("/");
+          fileName = fileName[1];
+          //alert(fileName);
+          //alert(resultChecker3);
+          if (imageType == "jpg"){
+              //alert("Downloading " + result.text +"!");
+              var image = document.getElementById('myImage');
+              image.src = result.text;
+              trans = new FileTransfer();
+              var path = cordova.file.externalDataDirectory+fileName+".jpg";
+              //alert("Data Directory: " +cordova.file.dataDirectory);
+              //alert("File Downloading: "+ cordova.file.dataDirectory+fileName+".jpg");
+              trans.download(result.text, path , app.downloadSuccess, app.downloadError);
+              
+          }else{
+              alert("Invalid QR Code, must be a jpg");   
+          }
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+    
+    },
+    
+    downloadSuccess: function(entry){
+        alert("It is downloaded!");  
+        
+    },
+    
+    downloadError: function(error){
+        alert(error);
     }
     
 };
