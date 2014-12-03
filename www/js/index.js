@@ -114,7 +114,7 @@ var app = {
         // Big win!    
             var link = JSON.parse(xhr.responseText).data.link;
         //document.querySelector("#link").href = link;
-            qrThisPic(link);
+            app.qrThisPic(link);
 
             document.body.className = "uploaded";
         }
