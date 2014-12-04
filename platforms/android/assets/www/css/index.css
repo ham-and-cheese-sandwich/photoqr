@@ -109,7 +109,7 @@ header h2{
 
 #navheader{
 	margin-bottom:0px;
-	height: 10vh;
+	height: 13vh;
 	background-color:#2D2D2D;
 }
 
@@ -183,7 +183,7 @@ header h2{
 
 .container {
 	text-align: center;
-	height: 90vh;
+	height: 97vh;
 }
 
 #addingNew, #menu{
@@ -192,11 +192,7 @@ header h2{
 
 /***IMAGE***/
 #myImage{
-width:300px;
-margin-bottom:150px;
--webkit-transform: rotate(90deg); 
--moz-transform: rotate(90deg); 
--o-transform: rotate(90deg);
--ms-transform: rotate(90deg); 
-margin-top: 90px;
+max-width: 300px;
+max-height: 400px;
+margin: auto 0;
 }
