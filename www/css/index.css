@@ -107,10 +107,24 @@ header h2{
 	font-family: 'Oleo Script', cursive;
 }
 
+header h3{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	color:#ffffff;
+	text-shadow: 2px 2px #222222;
+	font-family: 'Oleo Script', cursive;
+}
+
 #navheader{
 	margin-bottom:0px;
 	height: 13vh;
 	background-color:#2D2D2D;
+}
+
+.back{
+	text-shadow: 2px 2px #222222;
 }
 
 /***BUTTONS***/
@@ -173,7 +187,7 @@ header h2{
 	
 }
 
-#albumicture #prevPicture{
+#albumPicture #prevPicture{
 	float:right;
 }
 .maincontainer{
