@@ -18,6 +18,11 @@
  */
 
 var localImage = "";
+//Pages//
+var menu = document.getElementById("menu");
+var addingNew = document.getElementById("addingNew");
+var photoAlbum = document.getElementById("photoAlbum");
+var showPicture = document.getElementById("showPicture");
 
 var app = {
     
@@ -83,18 +88,16 @@ var app = {
         }
 	 },
 	 
-	 goToMainPage: function () {
-        var hidden = document.getElementById("addingNew");
-        var shown = document.getElementById("menu");
-        hidden.className = "hidden";
-        shown.className = "";
+	goToMainPage: function () {		
+		menu.className = "";
+		addingNew.className = "hidden";
+		photoAlbum.className = "hidden";
     },
 	
 	goToAlbum: function(){
-        var hidden = document.getElementById("menu");
-        var shown = document.getElementById("photoAlbum");
-        hidden.className = "hidden";
-        shown.className = "";
+      	menu.className = "hidden";
+		addingNew.className = "hidden";
+		photoAlbum.className = "";
         
     },
 	
@@ -106,10 +109,9 @@ var app = {
              
             localImage = imageURI;
              
-			var hidden = document.getElementById("menu");
-        	var shown = document.getElementById("addingNew");
-       		hidden.className = "hidden";
-        	shown.className = "";
+			menu.className = "hidden";
+			addingNew.className = "";
+			photoAlbum.className = "hidden";
              //document.getElementById('takePicture').innerHTML = "Hell's no, take another pic yo!"
         }, function(message) {
             alert('Failed because: ' + message);
