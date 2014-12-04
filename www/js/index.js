@@ -18,6 +18,11 @@
  */
 
 var localImage = "";
+//Pages//
+var menu = document.getElementById("menu");
+var addingNew = document.getElementById("addingNew");
+var photoAlbum = document.getElementById("photoAlbum");
+var showPicture = document.getElementById("showPicture");
 
 var app = {
     
@@ -62,13 +67,11 @@ var app = {
         	albumbtn.addEventListener("click",function(){
             app.goToAlbum(); 
 			},true);	
-					
-			
+								
 		var picAgainbtn = document.getElementById("takePictureAgain");
         	picAgainbtn.addEventListener("click",function(){
             app.takeDatPicYo();
 			},true);
-			
 			
         var buttonBack = document.getElementsByClassName("back");
         for (var i = 0; i < buttonBack.length; i++) {
@@ -83,11 +86,10 @@ var app = {
         }
 	 },
 	 
-	 goToMainPage: function () {
-        var hidden = document.getElementById("addingNew");
-        var shown = document.getElementById("menu");
-        hidden.className = "hidden";
-        shown.className = "";
+    goToMainPage: function () {		
+		menu.className = "";
+		addingNew.className = "hidden";
+		photoAlbum.className = "hidden";
     },
 	
 	goToAlbum: function(){
@@ -95,7 +97,9 @@ var app = {
         var shown = document.getElementById("photoAlbum");
         hidden.className = "hidden";
         shown.className = "";
+        app.displayPictureAlbum();
         
+        console.log("click");
     },
 	
     takeDatPicYo: function(){
@@ -106,10 +110,9 @@ var app = {
              
             localImage = imageURI;
              
-			var hidden = document.getElementById("menu");
-        	var shown = document.getElementById("addingNew");
-       		hidden.className = "hidden";
-        	shown.className = "";
+			menu.className = "hidden";
+			addingNew.className = "";
+			photoAlbum.className = "hidden";
              //document.getElementById('takePicture').innerHTML = "Hell's no, take another pic yo!"
         }, function(message) {
             alert('Failed because: ' + message);
@@ -178,6 +181,21 @@ var app = {
               //alert("File Downloading: "+ cordova.file.dataDirectory+fileName+".jpg");
               trans.download(result.text, path , app.downloadSuccess, app.downloadError);
               
+              //saves the file paths into local storage, this will help for getting picture item          
+              var saved = localStorage.getItem('saved images', path);
+              if(saved == null)
+              {
+                  console.log("local storage is empty");
+                  localStorage.setItem('saved images', path);
+              }
+              else
+              {
+                  console.log("local storage contains images");
+                  var placeholder = saved;
+                  localStorage.setItem('saved images', saved+","+path);
+                  console.log(localStorage.getItem('saved images'));
+              }
+              
           }else{
               alert("Invalid QR Code, must be a jpg");   
           }
@@ -196,7 +214,39 @@ var app = {
     
     downloadError: function(error){
         alert(error);
-    }
+    },
+    
+    displayPictureAlbum: function(){
+
+        //if the local storage with 'saved images' has items in it
+        if(localStorage.getItem('saved images') )
+        {
+            console.log("local storage contains images, populate gallery");
+            
+            var retrievedImages = localStorage.getItem('saved images');
+            var splitText = retrievedImages.split(",");
+            
+            var string= "";
+            var list = document.getElementById("picList");
+            for(var i=0; i < splitText.length; i++)
+            {
+                var li = document.createElement("li");
+                var img = document.createElement("img");
+                img.src = splitText[i];
+                li.appendChild(img);
+                list.appendChild(li);
+                //console.log(splitText[i]);//thats working
+                
+                //string += "<li><img src='"+splitText[i]+"'/></li>";
+                //on click ---> show larger image, give option to share
+            }
+            //console.log(string); //displays proper string
+            
+            //list.innerHTML = string;
+   
+        }
+
+    },
     
 };
 

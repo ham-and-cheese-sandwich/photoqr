@@ -32,7 +32,8 @@
         <div class="app">
             <div id="menu">
             	<header>
-                    <h1>Photo<span id="headerwrd">Bitches</span></h1>                  
+                    <h1>Photo<span id="headerwrd">Bitches</span></h1>  
+                    <h3>Share Pictures Using QR</h3>                
                 </header> 
                 <div class="maincontainer">
                     <button id="takePicture" class="homebutton">
@@ -65,7 +66,7 @@
             <div id='addingNew' class="hidden">  
             	<header id="navheader">
                     <h2>Photo<span id="headerwrd">Bitches</span></h2>
-                    <h3>Take Picture</h3>
+                    <h4>Take Picture</h4>
                      <a class = "back icon-arrow-left left" ></a>                  
                 </header> 
                 <div class="container">
@@ -78,12 +79,12 @@
             <div id='photoAlbum' class="hidden">  
             	<header id="navheader">
                     <h2>Photo<span id="headerwrd">Bitches</span></h2>
-                    <!--<a class = "back icon-arrow-left left" ></a> -->
-                    <h3>Photo Album</h3>
+                    <a class = "back icon-arrow-left left" ></a>
+                    <h4>Photo Album</h4>
                                       
                 </header> 
                 <div class="container">
-                    <ul class="picList">
+                    <ul id="picList">
                     </ul>
                 </div>
             </div>
@@ -92,13 +93,24 @@
             	<header id="navheader">
                     <h2>Photo<span id="headerwrd">Bitches</span></h2>
                      <a class = "back icon-arrow-left left" ></a> 
-                    <h3>View Photo</h3>                 
+                    <h4>View Photo</h4>                 
                 </header> 
                 <div class="container">
                     
                 </div>
             </div>
             
+            <div id='picHistory' class="hidden">  
+            	<header id="navheader">
+                    <h2>Photo<span id="headerwrd">Bitches</span></h2>
+                     <a class = "back icon-arrow-left left" ></a> 
+                    <h4>Picture History</h4>                 
+                </header> 
+                <div class="container">
+                    <ul class="historyList">
+                    </ul>
+                </div>
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
