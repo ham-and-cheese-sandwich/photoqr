@@ -23,6 +23,7 @@ var menu = document.getElementById("menu");
 var addingNew = document.getElementById("addingNew");
 var photoAlbum = document.getElementById("photoAlbum");
 var showPicture = document.getElementById("showPicture");
+var picHistory = document.getElementById("picHistory");
 
 var app = {
     
@@ -83,6 +84,13 @@ var app = {
         decodebtn.addEventListener("click",function(){
             app.picThisQr();
         },true);
+		
+		var historybtn = document.getElementById("prevPicture");
+        historybtn.addEventListener("click",function(){
+            app.goToHistory();
+			console.log("click");
+        },true);
+		
         }
 	 },
 	 
@@ -90,16 +98,24 @@ var app = {
 		menu.className = "";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
+		picHistory.className = "hidden";
     },
 	
 	goToAlbum: function(){
-        var hidden = document.getElementById("menu");
-        var shown = document.getElementById("photoAlbum");
-        hidden.className = "hidden";
-        shown.className = "";
+        menu.className = "hidden";
+		addingNew.className = "hidden";
+		photoAlbum.className = "";
+		picHistory.classList = "hidden";
         app.displayPictureAlbum();
         
         console.log("click");
+    },
+	
+	goToHistory: function () {		
+		menu.className = "hidden";
+		addingNew.className = "hidden";
+		photoAlbum.className = "hidden";
+		picHistory.className = "";
     },
 	
     takeDatPicYo: function(){
