@@ -43,7 +43,7 @@
   text-decoration: inherit;
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
-  text-shadow: 2px 2px #222222;
+  
 }
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
