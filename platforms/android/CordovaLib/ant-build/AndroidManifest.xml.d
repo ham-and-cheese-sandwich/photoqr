@@ -1,2 +1,2 @@
-C:\wamp\www\mad9135\photoQR\platforms\android\CordovaLib\ant-build\AndroidManifest.xml : \
-C:\wamp\www\mad9135\photoQR\platforms\android\CordovaLib\AndroidManifest.xml \
+C:\Users\Jessica\mad-9135\photoqr\platforms\android\CordovaLib\ant-build\AndroidManifest.xml : \
+C:\Users\Jessica\mad-9135\photoqr\platforms\android\CordovaLib\AndroidManifest.xml \

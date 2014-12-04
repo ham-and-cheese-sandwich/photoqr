@@ -58,6 +58,12 @@ var app = {
             app.uploadDatPicYo(); 
 			},true);
 			
+		var albumbtn = document.getElementById("albumPicture");
+        	albumbtn.addEventListener("click",function(){
+            app.goToAlbum(); 
+			},true);	
+					
+			
 		var picAgainbtn = document.getElementById("takePictureAgain");
         	picAgainbtn.addEventListener("click",function(){
             app.takeDatPicYo();
@@ -82,6 +88,14 @@ var app = {
         var shown = document.getElementById("menu");
         hidden.className = "hidden";
         shown.className = "";
+    },
+	
+	goToAlbum: function(){
+        var hidden = document.getElementById("menu");
+        var shown = document.getElementById("photoAlbum");
+        hidden.className = "hidden";
+        shown.className = "";
+        
     },
 	
     takeDatPicYo: function(){

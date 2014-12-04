@@ -100,8 +100,18 @@ header h2{
 	margin: 0 auto;
 	display: block;
 	text-align: center;
-	padding-top: 11px;
 	font-size: 40px;
+	color:#ffffff;
+	text-shadow: 2px 2px #222222;
+	font-family: 'Oleo Script', cursive;
+}
+
+header h3{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	font-size: 25px;
+	margin-top: -15px;
 	color:#ffffff;
 	text-shadow: 2px 2px #222222;
 	font-family: 'Oleo Script', cursive;
@@ -111,6 +121,10 @@ header h2{
 	margin-bottom:0px;
 	height: 13vh;
 	background-color:#2D2D2D;
+}
+
+.back{
+	text-shadow: 2px 2px #222222;
 }
 
 /***BUTTONS***/
@@ -173,7 +187,7 @@ header h2{
 	
 }
 
-#albumicture #prevPicture{
+#albumPicture #prevPicture{
 	float:right;
 }
 .maincontainer{
