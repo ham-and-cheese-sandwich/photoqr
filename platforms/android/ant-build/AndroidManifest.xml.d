@@ -1,2 +1,2 @@
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\AndroidManifest.xml : \
-c:\wamp\www\mad9135\photoQR\platforms\android\AndroidManifest.xml \
+C:\Users\Jessica\mad_9135\photoqr\platforms\android\ant-build\AndroidManifest.xml : \
+C:\Users\Jessica\mad_9135\photoqr\platforms\android\AndroidManifest.xml \
