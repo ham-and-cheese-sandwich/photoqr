@@ -181,6 +181,21 @@ var app = {
               //alert("File Downloading: "+ cordova.file.dataDirectory+fileName+".jpg");
               trans.download(result.text, path , app.downloadSuccess, app.downloadError);
               
+              //saves the file paths into local storage, this will help for getting picture item          
+              var saved = localStorage.getItem('saved images', path);
+              if(saved == null)
+              {
+                  console.log("local storage is empty");
+                  localStorage.setItem('saved images', path);
+              }
+              else
+              {
+                  console.log("local storage contains images");
+                  var placeholder = saved;
+                  localStorage.setItem('saved images', saved+","+path);
+                  console.log(localStorage.getItem('saved images'));
+              }
+              
           }else{
               alert("Invalid QR Code, must be a jpg");   
           }
