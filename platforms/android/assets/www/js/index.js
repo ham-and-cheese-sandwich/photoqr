@@ -24,6 +24,8 @@ var addingNew = document.getElementById("addingNew");
 var photoAlbum = document.getElementById("photoAlbum");
 var showPicture = document.getElementById("showPicture");
 var picHistory = document.getElementById("picHistory");
+var saveFileImage = "";
+var saveFileName = "";
 
 var app = {
     
@@ -124,6 +126,7 @@ var app = {
             image.src = "data:image/jpeg;base64," + imageURI;
              
             localImage = imageURI;
+            saveFileImage = "data:image/jpeg;base64," + imageURI;
              
 			menu.className = "hidden";
 			addingNew.className = "";
@@ -150,6 +153,16 @@ var app = {
             // Big win!  
             //document.querySelector("#link").href = link;
                 app.qrThisPic(link);
+                
+                var linkHolder = "";
+                var placeHolder = "";
+                linkHolder = link.split(".");
+                placeHolder = linkHolder.pop();
+                saveFileName = linkHolder.pop();
+                saveFileName = saveFileName.split("/");
+                saveFileName = saveFileName[1];
+                console.log(saveFileName);
+                window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.gotFS, app.failFS);
 
                 document.body.className = "uploaded";
             }
@@ -280,8 +293,32 @@ var app = {
 
     return(states[networkState]);
         
-    }
+    },
     
+    
+    gotFS:function(fileSystem){
+        console.log("Starting fileSystem.getFile");
+        fileSystem.getFile(saveFileName+".txt", {create: true, exclusive: false}, app.gotFSSuccess, app.gotFSFail);
+    },
+    
+    gotFSSuccess:function(fileEntry){
+        fileEntry.createWriter(app.createFileWriter, app.createWriterFail);
+    },
+    
+    gotFSFail:function(error){
+        console.log("FailFS:"+error);
+    },
+    
+    createFileWriter:function(writer){
+        console.log("open and write");
+        writer.seek(0);
+        writer.write(saveFileImage);
+        console.log("close and save");
+    },
+    
+    createWriterFail:function(errpr){
+        console.log("FAIL:"+errpr);
+    }
 };
 
 app.initialize();

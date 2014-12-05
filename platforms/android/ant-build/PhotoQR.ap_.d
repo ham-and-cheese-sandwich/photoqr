@@ -1,157 +1,157 @@
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\PhotoQR.ap_ \
- : c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable\share_via_barcode.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable\shopper_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-hdpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-hdpi\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-hdpi\shopper_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-land-hdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-land-ldpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-land-mdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-land-xhdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-ldpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-mdpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-port-hdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-port-ldpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-port-mdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-port-xhdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-xhdpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-xhdpi\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\drawable-xxhdpi\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\bookmark_picker_list_item.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\capture.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\encode.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\help.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\history_list_item.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\search_book_contents.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\search_book_contents_header.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\search_book_contents_list_item.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout\share.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout-land\encode.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout-land\share.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\layout-ldpi\capture.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\menu\capture.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\menu\encode.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\menu\history.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\raw\beep.ogg \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values\arrays.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values\colors.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values\dimens.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values\ids.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-ar\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-bg\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-ca\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-cs\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-da\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-de\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-el\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-es\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-eu\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-fi\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-fr\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-he\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-hi\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-hu\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-id\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-it\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-iw\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-ja\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-ko\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-nl\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-pl\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-pt\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-ru\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-sk\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-sl\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-sv\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-tr\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-zh-rCN\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\values-zh-rTW\strings.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\xml\config.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\res\xml\preferences.xml \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable\share_via_barcode.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable\shopper_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-hdpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-hdpi\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-hdpi\shopper_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-land-hdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-land-ldpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-land-mdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-land-xhdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-ldpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-mdpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-port-hdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-port-ldpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-port-mdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-port-xhdpi\screen.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-xhdpi\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\res\drawable-xxhdpi\launcher_icon.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\_where-is-www.txt \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\cordova.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\cordova_plugins.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\css \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\img \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\index.html \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\stylesheets \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\css\index.css \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfont.eot \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfont.svg \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfont.ttf \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfont.woff \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\FontAwesome.otf \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\OleoScript-Bold.ttf \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\OleoScript-Regular.ttf \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\img\logo.png \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\js\index.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www\barcodescanner.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\Camera.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraConstants.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryReader.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Entry.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\File.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileEntry.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileError.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileReader.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileSystem.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\fileSystemPaths.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\fileSystems-roots.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\fileSystems.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileUploadOptions.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileUploadResult.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileWriter.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Flags.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\LocalFileSystem.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Metadata.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\ProgressEvent.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android\FileSystem.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
-c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\stylesheets\font-awesome.css \
-c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\AndroidManifest.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\PhotoQR.ap_ \
+ : C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable\share_via_barcode.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable\shopper_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-hdpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-hdpi\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-hdpi\shopper_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-land-hdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-land-ldpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-land-mdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-land-xhdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-ldpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-mdpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-port-hdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-port-ldpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-port-mdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-port-xhdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-xhdpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-xhdpi\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\drawable-xxhdpi\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\bookmark_picker_list_item.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\capture.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\encode.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\help.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\history_list_item.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\search_book_contents.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\search_book_contents_header.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\search_book_contents_list_item.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout\share.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout-land\encode.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout-land\share.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\layout-ldpi\capture.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\menu\capture.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\menu\encode.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\menu\history.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\raw\beep.ogg \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values\arrays.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values\colors.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values\dimens.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values\ids.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-ar\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-bg\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-ca\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-cs\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-da\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-de\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-el\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-es\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-eu\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-fi\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-fr\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-he\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-hi\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-hu\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-id\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-it\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-iw\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-ja\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-ko\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-nl\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-pl\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-pt\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-ru\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-sk\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-sl\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-sv\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-tr\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-zh-rCN\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\values-zh-rTW\strings.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\xml\config.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\res\xml\preferences.xml \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable\share_via_barcode.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable\shopper_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-hdpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-hdpi\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-hdpi\shopper_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-land-hdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-land-ldpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-land-mdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-land-xhdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-ldpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-mdpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-port-hdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-port-ldpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-port-mdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-port-xhdpi\screen.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-xhdpi\icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-xhdpi\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\res\drawable-xxhdpi\launcher_icon.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\_where-is-www.txt \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\cordova.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\cordova_plugins.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\css \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\img \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\index.html \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\stylesheets \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\css\index.css \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\fontawesome-webfont.eot \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\fontawesome-webfont.svg \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\fontawesome-webfont.ttf \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\fontawesome-webfont.woff \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\FontAwesome.otf \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\OleoScript-Bold.ttf \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\font\OleoScript-Regular.ttf \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\img\logo.png \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\js\index.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.camera \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.network-information \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner\www\barcodescanner.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.camera\www \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\Camera.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraConstants.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverHandle.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.camera\www\CameraPopoverOptions.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryEntry.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\DirectoryReader.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Entry.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\File.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileEntry.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileError.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileReader.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileSystem.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\fileSystemPaths.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\fileSystems-roots.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\fileSystems.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileUploadOptions.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileUploadResult.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\FileWriter.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Flags.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\LocalFileSystem.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\Metadata.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\ProgressEvent.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\requestFileSystem.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\resolveLocalFileSystemURI.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file\www\android\FileSystem.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransfer.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.file-transfer\www\FileTransferError.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\Connection.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\plugins\org.apache.cordova.network-information\www\network.js \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\assets\www\stylesheets\font-awesome.css \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalX\photoqr\platforms\android\ant-build\AndroidManifest.xml \
