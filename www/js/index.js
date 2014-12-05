@@ -104,6 +104,8 @@ var app = {
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
 		picHistory.className = "hidden";
+		showPicture.className = "hidden";
+
     },
 	
 	goToAlbum: function(){
@@ -111,6 +113,7 @@ var app = {
 		addingNew.className = "hidden";
 		photoAlbum.className = "";
 		picHistory.classList = "hidden";
+		showPicture.className = "hidden";
         app.displayPictureAlbum();
     },
 	
@@ -118,6 +121,7 @@ var app = {
 		menu.className = "hidden";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
+		showPicture.className = "hidden";
 		picHistory.className = "";
         app.displayUploadHistory();
     },
@@ -139,7 +143,7 @@ var app = {
                 targetWidth: 1500,
                 targetHeight: 1500,
                 correctOrientation: true,
-                quality:100
+                quality:60
             });
         },
 		   
@@ -360,8 +364,11 @@ var app = {
     },
     
     imageScreen: function(html){ 
-        document.getElementById('photoAlbum').className = 'hidden';
-        document.getElementById('showPicture').className = 'show';
+        menu.className = "hidden";
+		addingNew.className = "hidden";
+		photoAlbum.className = "hidden";
+		showPicture.className = "";
+		picHistory.className = "hidden";
         var frame = document.getElementById('frame');
         frame.innerHTML = "";
         
@@ -434,6 +441,3 @@ var app = {
 };
 
 app.initialize();
-
-
-
