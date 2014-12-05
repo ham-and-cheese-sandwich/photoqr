@@ -69,6 +69,10 @@ table {
   display: none;
 }
 
+.show{
+    display: block;
+}
+
 /***HEADER***/
 header{
 	color: #000000;
@@ -244,19 +248,25 @@ margin-top: 10px;
 }
 
 #picList li{
-    max-width: 25%;
+    max-width: 29%;
+    height: 55px;
+    overflow: hidden;
     display: block;
-    float: left;
-}
-
-#picList img{
-    max-width: 80%;
     float: left;
     border: 2px solid rgb(214, 214, 214);
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
 }
 
+#picList img{
+    width:100%;
+}
+
+
+#frame img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
 /***Spinner***/
 

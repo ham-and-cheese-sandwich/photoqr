@@ -27,6 +27,8 @@ var picHistory = document.getElementById("picHistory");
 var saveFileImage = "";
 var saveFileName = "";
 
+var fileName = "";
+
 var app = {
     
     // Application Constructor
@@ -172,26 +174,10 @@ var app = {
 
                 document.body.className = "uploaded";
 
-                //create file reader to read .txt file
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    var text = e.target.result;
+                fileName = saveFileName + ".txt";
+                console.log(fileName);
 
-                    //upload image history
-                    var uploaded = localStorage.getItem('uploaded images');
-                    if (uploaded == null) {
-                        localStorage.setItem('uploaded images', text);
-                        console.log(text);
-                    } else {
-                        var placeholder = uploaded;
-                        localStorage.setItem('uploaded images', uploaded + "," + text);
-                        console.log(localStorage.getItem('uploaded images'));
-                      }
-                }
-
-                    var filePath = cordova.file.externalDataDirectory + saveFileName+".txt";
-                        console.log(filePath);
-                        reader.readAsDataURL(filePath);
+                    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied)
 
                 }
                 // Ok, I don't handle the errors. An exercice for the reader.
@@ -202,6 +188,61 @@ var app = {
             } else {
                 alert("No network connection, an internet connection is required");
             }
+    },
+    
+    getImageInfo: function (data) {
+        data.getFile(fileName, {}, function (fileEntry) {
+            
+                // Get a File object representing the file,
+                // then use FileReader to read its contents.
+                console.log("use result to represent file");
+                fileEntry.file(function (file) 
+                {
+                    console.log("create reader");
+                    var reader = new FileReader();
+                    
+
+                    reader.onload = function (e) {
+                    
+                        console.log("onload");
+                        var text = reader.result;
+                        if(text == "")
+                        {
+                            console.log("empty result");
+                        }
+                        else{
+                        console.log(text);
+                        }
+
+               /*         //upload image history
+                        var uploaded = localStorage.getItem('uploaded images');
+                        if (uploaded == null) {
+                            localStorage.setItem('uploaded images', text);
+                            console.log(text);
+                        } else {
+                            var placeholder = uploaded;
+                            localStorage.setItem('uploaded images', uploaded + "," + text);
+                            console.log(localStorage.getItem('uploaded images'));
+                        }*/
+                    };
+                    reader.readAsText(file, "UTF-8");
+            }, app.somethingDied);
+
+        }, app.somethingDiedAgain);
+    },
+    
+      somethingDiedAgain: function(data)
+    {
+        console.log("you dun fucked");
+    },
+    
+        somethingDied: function(data)
+    {
+        console.log("you dun goofed");
+    },
+ somethingBeDead: function(data)
+    {
+        console.log("you dun goofed");
     },
     
     qrThisPic: function(imgUrl){
@@ -290,23 +331,44 @@ var app = {
         //if the local storage with 'saved images' has items in it
         if(localStorage.getItem('saved images') )
         {
-            console.log("local storage contains images, populate gallery");
             
             var retrievedImages = localStorage.getItem('saved images');
             var splitText = retrievedImages.split(",");
             
             var string= "";
             var list = document.getElementById("picList");
+            list.innerHTML = "";
             for(var i=0; i < splitText.length; i++)
             {
                 var li = document.createElement("li");
+                li.className = "viewImage"
                 var img = document.createElement("img");
                 img.src = splitText[i];
                 li.appendChild(img);
                 list.appendChild(li);             
-                //on click ---> show larger image, give option to share
-            }   
+                
+            }
+            
+            //on click ---> show larger image, give option to share
+            var viewImage = document.getElementsByClassName("viewImage");
+            for(var i=0;i<viewImage.length;i++){
+                viewImage[i].addEventListener("click",function(){
+                    app.imageScreen(this.lastElementChild.src);   
+                },true);
+            }
         }
+    },
+    
+    imageScreen: function(html){ 
+        document.getElementById('photoAlbum').className = 'hidden';
+        document.getElementById('showPicture').className = 'show';
+        var frame = document.getElementById('frame');
+        frame.innerHTML = "";
+        
+        var img = document.createElement("img");
+        img.src = html;
+        frame.appendChild(img);
+        
     },
     
     checkConnection: function(){
