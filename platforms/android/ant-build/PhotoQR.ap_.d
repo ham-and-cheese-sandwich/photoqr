@@ -108,6 +108,8 @@ c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfon
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfont.ttf \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\fontawesome-webfont.woff \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\FontAwesome.otf \
+c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\OleoScript-Bold.ttf \
+c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\font\OleoScript-Regular.ttf \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\img\logo.png \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\js\index.js \
 c:\wamp\www\mad9135\photoQR\platforms\android\assets\www\plugins\com.phonegap.plugins.barcodescanner \
