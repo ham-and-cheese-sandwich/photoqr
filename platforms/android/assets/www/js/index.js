@@ -25,8 +25,6 @@ var photoAlbum = document.getElementById("photoAlbum");
 var showPicture = document.getElementById("showPicture");
 var picHistory = document.getElementById("picHistory");
 
-var counter = 0;
-
 var app = {
     
     // Application Constructor
@@ -62,7 +60,9 @@ var app = {
         },true);
 		
 		var uploadbtn = document.getElementById("uploadPicture");
-        	uploadbtn.addEventListener("click", app.uploadPic,true);
+        	uploadbtn.addEventListener("click", function(){
+        app.uploadDatPicYo(); 
+        },true);
 			
 		var albumbtn = document.getElementById("albumPicture");
         	albumbtn.addEventListener("click",function(){
@@ -86,17 +86,11 @@ var app = {
 		var historybtn = document.getElementById("prevPicture");
         historybtn.addEventListener("click",function(){
             app.goToHistory();
-			console.log("click");
         },true);
 		
         }
 	 },
 	 
-    uploadPic: function()
-    {
-        app.uploadDatPicYo(); 
-    },
-    
     decodeQR: function() {
             app.picThisQr();
             console.log("decode click");
@@ -114,8 +108,6 @@ var app = {
 		photoAlbum.className = "";
 		picHistory.classList = "hidden";
         app.displayPictureAlbum();
-        
-        console.log("click");
     },
 	
 	goToHistory: function () {		
@@ -136,11 +128,10 @@ var app = {
 			menu.className = "hidden";
 			addingNew.className = "";
 			photoAlbum.className = "hidden";
-             //document.getElementById('takePicture').innerHTML = "Hell's no, take another pic yo!"
         }, function(message) {
         }, { destinationType: Camera.DestinationType.DATA_URL, 
-            targetWidth: 500,
-            targetHeight: 500,
+            targetWidth: 1500,
+            targetHeight:1500,
             correctOrientation:true});
     },
 		   
@@ -154,12 +145,7 @@ var app = {
             var xhr = new XMLHttpRequest(); // Create the XHR (Cross-Domain XHR FTW!!!) Thank you sooooo much imgur.com
             xhr.open("POST", "https://api.imgur.com/3/image.json"); // Boooom!
             xhr.onload = function() {
-                var response = xhr.responseText;
-                console.log(response);
-                var test = JSON.parse(response);
-                console.log(test);
-
-                var link = test.data.link;
+                var link = JSON.parse(xhr.responseText).data.link;
 
             // Big win!  
             //document.querySelector("#link").href = link;
@@ -190,11 +176,6 @@ var app = {
     },
     
     picThisQr: function(){
-                console.log("beginning of picThisQR");
-
-        counter++;
-        
-        console.log(counter);
         
         if(app.checkConnection() != "None"){
         
@@ -211,16 +192,13 @@ var app = {
                   // get rid of the '/'
                   fileName = fileName.split("/");
                   fileName = fileName[1];
-                  //alert(fileName);
-                  //alert(resultChecker3);
                   if (imageType == "jpg"){
-                      //alert("Downloading " + result.text +"!");
+
                       var image = document.getElementById('myImage');
                       image.src = result.text;
                       trans = new FileTransfer();
                       var path = cordova.file.externalDataDirectory+fileName+".jpg";
-                      //alert("Data Directory: " +cordova.file.dataDirectory);
-                      //alert("File Downloading: "+ cordova.file.dataDirectory+fileName+".jpg");
+
                       trans.download(result.text, path , app.downloadSuccess, app.downloadError);
 
                       //saves the file paths into local storage, this will help for getting picture item          
@@ -280,18 +258,10 @@ var app = {
                 var img = document.createElement("img");
                 img.src = splitText[i];
                 li.appendChild(img);
-                list.appendChild(li);
-                //console.log(splitText[i]);//thats working
-                
-                //string += "<li><img src='"+splitText[i]+"'/></li>";
+                list.appendChild(li);             
                 //on click ---> show larger image, give option to share
-            }
-            //console.log(string); //displays proper string
-            
-            //list.innerHTML = string;
-   
+            }   
         }
-
     },
     
     checkConnection: function(){
