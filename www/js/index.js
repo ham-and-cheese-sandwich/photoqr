@@ -16,7 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 var localImage = "";
 //Pages//
 var menu = document.getElementById("menu");
@@ -25,8 +24,10 @@ var photoAlbum = document.getElementById("photoAlbum");
 var showPicture = document.getElementById("showPicture");
 var picHistory = document.getElementById("picHistory");
 var saveFileImage = "";
+var uploadedImage= [];
 var saveFileName = "";
-
+var fileName = "";
+var base64Code = "";
 var app = {
     
     // Application Constructor
@@ -52,9 +53,7 @@ var app = {
     receivedEvent: function(id) {
         
     },
-
 	setUpButtonListeners: function () {
-
 		var picbtn = document.getElementById("takePicture");
         	picbtn.addEventListener("click",function(){
             app.takeDatPicYo();    
@@ -121,11 +120,9 @@ var app = {
     },
 	
     takeDatPicYo: function () {
-
             navigator.camera.getPicture(function (imageURI) {
                 var image = document.getElementById('myImage');
                 image.src = "data:image/jpeg;base64," + imageURI;
-
                 localImage = imageURI;
                 saveFileImage = imageURI;
 //"data:image/jpeg;base64,"
@@ -136,14 +133,11 @@ var app = {
                 destinationType: Camera.DestinationType.DATA_URL,
                 targetWidth: 1500,
                 targetHeight: 1500,
-                correctOrientation: true,
-                quality:100
+                correctOrientation: true
             });
         },
 		   
     uploadDatPicYo: function () {
-
-
         if (app.checkConnection() != "None") {
             
             document.getElementById('loader').style.display = "block";
@@ -155,11 +149,8 @@ var app = {
             xhr.open("POST", "https://api.imgur.com/3/image.json"); // Boooom!
             xhr.onload = function () {
                 var link = JSON.parse(xhr.responseText).data.link;
-
                 // Big win!  
-                //document.querySelector("#link").href = link;
                 app.qrThisPic(link);
-
                 var linkHolder = "";
                 var placeHolder = "";
                 linkHolder = link.split(".");
@@ -168,40 +159,131 @@ var app = {
                 saveFileName = saveFileName.split("/");
                 saveFileName = saveFileName[1];
                 console.log(saveFileName);
+                
+                
                 window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.gotFS, app.failFS);
-
                 document.body.className = "uploaded";
-
-                //create file reader to read .txt file
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    var text = e.target.result;
-
-                    //upload image history
-                    var uploaded = localStorage.getItem('uploaded images');
-                    if (uploaded == null) {
-                        localStorage.setItem('uploaded images', text);
-                        console.log(text);
-                    } else {
-                        var placeholder = uploaded;
-                        localStorage.setItem('uploaded images', uploaded + "," + text);
-                        console.log(localStorage.getItem('uploaded images'));
-                      }
+                fileName = saveFileName + ".txt";
+                console.log(fileName);
+                var file = cordova.file.externalDataDirectory + fileName;
+                var uploaded = localStorage.getItem('uploaded images');
+                if (uploaded == null) {
+                    localStorage.setItem('uploaded images', file);
+                    console.log(this.result);
+                } else {
+                    var placeholder = uploaded;
+                    localStorage.setItem('uploaded images', uploaded + "," + file);
+                    console.log(localStorage.getItem('uploaded images'));
                 }
-
-                    var filePath = cordova.file.externalDataDirectory + saveFileName+".txt";
-                        console.log(filePath);
-                        reader.readAsDataURL(filePath);
-
+                
+                    
                 }
                 // Ok, I don't handle the errors. An exercice for the reader.
                 xhr.setRequestHeader('Authorization', 'Client-ID d0ab2f5655610b2');
                 /* And now, we send the formdata */
                 xhr.send(fd);
-
             } else {
                 alert("No network connection, an internet connection is required");
             }
+    },
+    
+    getImageInfo: function (data) {
+        
+        if(localStorage.getItem('uploaded images'))
+        {
+            var upload = localStorage.getItem('uploaded images');
+            var picture = upload.split(",");
+            var history = "";
+            var imgurLink = "";
+            var dataURL = "";
+            
+            
+            for(var p =0; p < picture.length; p++)
+            {
+                history = picture[p].replace(cordova.file.externalDataDirectory, "");
+                imgurLink = history;
+                
+                imgurLink = imgurLink.replace(".txt", ".jpg");
+                dataURL = 'http://i.imgur.com/'+imgurLink;
+                
+                console.log(history);
+                
+                data.getFile(history, {}, function (fileEntry) {
+            
+                // Get a File object representing the file,
+                // then use FileReader to read its contents.
+                console.log("use result to represent file");
+                
+                fileEntry.file(function (file) 
+                {
+                    console.log("create reader");
+                    console.log(file);
+                    
+                    
+              //      //upload image history
+              //          var uploaded = localStorage.getItem('uploaded images');
+              //          if (uploaded == null) {
+              //              localStorage.setItem('uploaded images', file);
+              //              console.log(this.result);
+              //          } else {
+              //              var placeholder = uploaded;
+              //              localStorage.setItem('uploaded images', uploaded + "," + file);
+              //              console.log(localStorage.getItem('uploaded images'));
+              //          }
+                    
+                    var list = document.getElementById("historyList");
+                    list.innerHTML = "";
+                    
+                    var reader = new FileReader();
+                    
+                    reader.onloadend = function (e)
+                    {
+                    //console.log("SHIT OH GOD IT'S A : " +this.result);    
+                    base64Code = this.result;
+                        
+                    var li = document.createElement("li");
+                    var img = document.createElement("img");
+                            
+                        console.log("onload");
+                        //console.log(this.result);
+                        //var text = this.result;
+                        console.log("settting shit up!");
+                       var imgSrc = "data:image/jpeg;base64," + base64Code;
+
+                        img.setAttribute('src',imgSrc );
+                        img.setAttribute('data-url', dataURL);
+                         //console.log(img.src);
+                        //console.log("POOP "+base64Code);
+                                 img.addEventListener("click", function()
+                                                      {
+                                     app.qrThisPic(this.getAttribute('data-url'));
+                                 });
+                    li.appendChild(img);
+                    list.appendChild(li);   
+                        
+                    
+                    };
+                    reader.readAsText(file);
+            }, app.somethingDied);
+        }, app.somethingDiedAgain);
+            }
+        }
+         
+    },
+    
+    
+      somethingDiedAgain: function(data)
+    {
+        console.log("you dun fucked");
+    },
+    
+        somethingDied: function(data)
+    {
+        console.log("you dun goofed");
+    },
+ somethingBeDead: function(data)
+    {
+        console.log("you dun goofed");
     },
     
     qrThisPic: function(imgUrl){
@@ -226,7 +308,6 @@ var app = {
         
             cordova.plugins.barcodeScanner.scan(
               function (result) {
-
                   //These get the link's details
                   //Splits via '.', seperating the main domain's link, and final extension
                   var resultChecker = result.text.split(".");
@@ -238,14 +319,11 @@ var app = {
                   fileName = fileName.split("/");
                   fileName = fileName[1];
                   if (imageType == "jpg"){
-
                       var image = document.getElementById('myImage');
                       image.src = result.text;
                       trans = new FileTransfer();
                       var path = cordova.file.externalDataDirectory+fileName+".jpg";
-
                       trans.download(result.text, path , app.downloadSuccess, app.downloadError);
-
                       //saves the file paths into local storage, this will help for getting picture item          
                       var saved = localStorage.getItem('saved images', path);
                       if(saved == null)
@@ -260,7 +338,6 @@ var app = {
                           localStorage.setItem('saved images', saved+","+path);
                           console.log(localStorage.getItem('saved images'));
                       }
-
                   }else{
                       alert("Invalid QR Code, must be a jpg");   
                   }
@@ -269,7 +346,6 @@ var app = {
                   alert("Scanning failed: " + error);
               }
            );
-
         }else{
            alert("No network connection, an internet connection is required");
         }
@@ -286,17 +362,16 @@ var app = {
     },
     
     displayPictureAlbum: function(){
-
         //if the local storage with 'saved images' has items in it
         if(localStorage.getItem('saved images') )
         {
-            console.log("local storage contains images, populate gallery");
             
             var retrievedImages = localStorage.getItem('saved images');
             var splitText = retrievedImages.split(",");
             
             var string= "";
             var list = document.getElementById("picList");
+            list.innerHTML = "";
             for(var i=0; i < splitText.length; i++)
             {
                 var li = document.createElement("li");
@@ -312,7 +387,6 @@ var app = {
     checkConnection: function(){
      
     var networkState = navigator.connection.type;
-
     var states = {};
     states[Connection.UNKNOWN]  = 'Unknown connection';
     states[Connection.ETHERNET] = 'Ethernet connection';
@@ -322,7 +396,6 @@ var app = {
     states[Connection.CELL_4G]  = 'Cell 4G connection';
     states[Connection.CELL]     = 'Cell generic connection';
     states[Connection.NONE]     = 'None';
-
     return(states[networkState]);
         
     },
@@ -353,25 +426,13 @@ var app = {
     },
     
     displayUploadHistory: function () {
-
         if (localStorage.getItem('uploaded images')) {
-                var uploadedImages = localStorage.getItem('uploaded images');
-                var splitText = uploadedImages.split(",");
-                var list = document.getElementById("historyList");
-                for (var i = 0; i < splitText.length; i++) {
-                    var li = document.createElement("li");
-                    var img = document.createElement("img");
-                    img.src = splitText[i];
-
-                    li.appendChild(img);
-                    list.appendChild(li);
-                }
-
-            }
-    },
-};
-
+                
+            setTimeout(function(){
+                    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied);
+                    },1000);
+    }
+    
+}
+}
 app.initialize();
-
-
-
