@@ -82,7 +82,12 @@ var app = {
             buttonBack[i].addEventListener("click", function () {
                 app.goToMainPage();
             }, true);
-        }		
+        }
+		
+		var buttonBackShow = document.getElementById("backshow");
+        	buttonBackShow.addEventListener("click",function(){
+            app.goToAlbum(); 
+			},true);
             
         var historybtn = document.getElementById("prevPicture");
             historybtn.addEventListener("click", function() {
@@ -99,6 +104,7 @@ var app = {
             app.picThisQr();
             console.log("decode click");
     },
+	
     goToMainPage: function () {		
 		menu.className = "";
 		addingNew.className = "hidden";
