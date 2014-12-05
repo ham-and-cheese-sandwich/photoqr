@@ -47,7 +47,6 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         app.setUpButtonListeners(); 
-		    
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -55,7 +54,7 @@ var app = {
     },
 
 	setUpButtonListeners: function () {
-		 console.log("set up button listeners");
+
 		var picbtn = document.getElementById("takePicture");
         	picbtn.addEventListener("click",function(){
             app.takeDatPicYo();    
@@ -81,16 +80,17 @@ var app = {
             buttonBack[i].addEventListener("click", function () {
                 app.goToMainPage();
             }, true);
+        }		
             
+        var historybtn = document.getElementById("prevPicture");
+            historybtn.addEventListener("click", function() {
+                app.goToHistory();
+                console.log("click");
+        }, true);
+        
         var decodebtn = document.getElementById("getPicture");
         decodebtn.addEventListener("click", app.decodeQR,true);
-		
-		var historybtn = document.getElementById("prevPicture");
-        historybtn.addEventListener("click",function(){
-            app.goToHistory();
-        },true);
-		
-        }
+        
 	 },
 	 
     decodeQR: function() {
@@ -117,43 +117,48 @@ var app = {
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
 		picHistory.className = "";
+        app.displayUploadHistory();
     },
 	
-    takeDatPicYo: function(){
-		
-         navigator.camera.getPicture(function(imageURI) {
-            var image = document.getElementById('myImage');
-            image.src = "data:image/jpeg;base64," + imageURI;
-             
-            localImage = imageURI;
-            saveFileImage = "data:image/jpeg;base64," + imageURI;
-             
-			menu.className = "hidden";
-			addingNew.className = "";
-			photoAlbum.className = "hidden";
-        }, function(message) {
-        }, { destinationType: Camera.DestinationType.DATA_URL, 
-            targetWidth: 1500,
-            targetHeight:1500,
-            correctOrientation:true});
-    },
+    takeDatPicYo: function () {
+
+            navigator.camera.getPicture(function (imageURI) {
+                var image = document.getElementById('myImage');
+                image.src = "data:image/jpeg;base64," + imageURI;
+
+                localImage = imageURI;
+                saveFileImage = imageURI;
+//"data:image/jpeg;base64,"
+                menu.className = "hidden";
+                addingNew.className = "";
+                photoAlbum.className = "hidden";
+            }, function (message) {}, {
+                destinationType: Camera.DestinationType.DATA_URL,
+                targetWidth: 1500,
+                targetHeight: 1500,
+                correctOrientation: true
+            });
+        },
 		   
-    uploadDatPicYo: function(){
-        
-        
-        if(app.checkConnection() != "None"){
+    uploadDatPicYo: function () {
+
+
+        if (app.checkConnection() != "None") {
+            
+            document.getElementById('loader').style.display = "block";
+            
             /* Lets build a FormData object*/
-            var fd = new FormData(); 
+            var fd = new FormData();
             fd.append("image", localImage); // Append the file
             var xhr = new XMLHttpRequest(); // Create the XHR (Cross-Domain XHR FTW!!!) Thank you sooooo much imgur.com
             xhr.open("POST", "https://api.imgur.com/3/image.json"); // Boooom!
-            xhr.onload = function() {
+            xhr.onload = function () {
                 var link = JSON.parse(xhr.responseText).data.link;
 
-            // Big win!  
-            //document.querySelector("#link").href = link;
+                // Big win!  
+                //document.querySelector("#link").href = link;
                 app.qrThisPic(link);
-                
+
                 var linkHolder = "";
                 var placeHolder = "";
                 linkHolder = link.split(".");
@@ -165,24 +170,50 @@ var app = {
                 window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.gotFS, app.failFS);
 
                 document.body.className = "uploaded";
+
+                //create file reader to read .txt file
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    var text = e.target.result;
+
+                    //upload image history
+                    var uploaded = localStorage.getItem('uploaded images');
+                    if (uploaded == null) {
+                        localStorage.setItem('uploaded images', text);
+                        console.log(text);
+                    } else {
+                        var placeholder = uploaded;
+                        localStorage.setItem('uploaded images', uploaded + "," + text);
+                        console.log(localStorage.getItem('uploaded images'));
+                      }
+                }
+
+                    var filePath = cordova.file.externalDataDirectory + saveFileName+".txt";
+                        console.log(filePath);
+                        reader.readAsDataURL(filePath);
+
+                }
+                // Ok, I don't handle the errors. An exercice for the reader.
+                xhr.setRequestHeader('Authorization', 'Client-ID d0ab2f5655610b2');
+                /* And now, we send the formdata */
+                xhr.send(fd);
+
+            } else {
+                alert("No network connection, an internet connection is required");
             }
-            // Ok, I don't handle the errors. An exercice for the reader.
-            xhr.setRequestHeader('Authorization', 'Client-ID d0ab2f5655610b2');
-            /* And now, we send the formdata */
-            xhr.send(fd);
-        }else{
-            alert("No network connection, an internet connection is required");
-        }
-        
     },
     
     qrThisPic: function(imgUrl){
         //Encodes
-        cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, imgUrl, function(success)          {
+        
+        document.getElementById('loader').style.display = "none";
+        
+        cordova.plugins.barcodeScanner.encode(cordova.plugins.barcodeScanner.Encode.TEXT_TYPE, imgUrl, function(success) {
             //On successful Encoding, it will display it to share.
-            alert("encoding success: " + success);
+            alert(success);
+            
           }, function(fail) {
-            alert("encoding failed: " + fail);
+            alert(fail);
           }
         );
         
@@ -318,7 +349,25 @@ var app = {
     
     createWriterFail:function(errpr){
         console.log("FAIL:"+errpr);
-    }
+    },
+    
+    displayUploadHistory: function () {
+
+        if (localStorage.getItem('uploaded images')) {
+                var uploadedImages = localStorage.getItem('uploaded images');
+                var splitText = uploadedImages.split(",");
+                var list = document.getElementById("historyList");
+                for (var i = 0; i < splitText.length; i++) {
+                    var li = document.createElement("li");
+                    var img = document.createElement("img");
+                    img.src = splitText[i];
+
+                    li.appendChild(img);
+                    list.appendChild(li);
+                }
+
+            }
+    },
 };
 
 app.initialize();
