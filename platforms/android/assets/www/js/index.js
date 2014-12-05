@@ -136,7 +136,8 @@ var app = {
                 destinationType: Camera.DestinationType.DATA_URL,
                 targetWidth: 1500,
                 targetHeight: 1500,
-                correctOrientation: true
+                correctOrientation: true,
+                quality:100
             });
         },
 		   

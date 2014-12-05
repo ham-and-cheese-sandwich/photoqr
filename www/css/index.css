@@ -243,6 +243,20 @@ margin: auto 0;
 margin-top: 10px;
 }
 
+#picList li{
+    max-width: 25%;
+    display: block;
+    float: left;
+}
+
+#picList img{
+    max-width: 80%;
+    float: left;
+    border: 2px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    margin: 10px;
+}
+
 
 /***Spinner***/
 
