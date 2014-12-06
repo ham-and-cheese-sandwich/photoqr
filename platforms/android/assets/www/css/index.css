@@ -254,7 +254,7 @@ header h3{
 }
 
 
-#picList li{
+#historyList li, #picList li{
 	max-width: 28%;
 	height: 55px;
 	overflow: hidden;
@@ -266,7 +266,7 @@ header h3{
 	box-shadow: 2px 2px #212121;
 }
 
-#picList img{
+#historyList img, #picList img{
     width:100%;
 }
 

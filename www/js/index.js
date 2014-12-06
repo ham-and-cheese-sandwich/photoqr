@@ -26,7 +26,7 @@ var showPicture = document.getElementById("showPicture");
 var picHistory = document.getElementById("picHistory");
 var saveFileImage = "";
 var saveFileName = "";
-
+var base64Code = "";
 var fileName = "";
 
 var app = {
@@ -149,7 +149,6 @@ var app = {
                 targetWidth: 1500,
                 targetHeight: 1500,
                 correctOrientation: true,
-                quality:60
             });
         },
 		   
@@ -186,8 +185,16 @@ var app = {
 
                 fileName = saveFileName + ".txt";
                 console.log(fileName);
-
-                    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied)
+                var file = cordova.file.externalDataDirectory + fileName;
+                var uploaded = localStorage.getItem('uploaded images');
+                if (uploaded == null) {
+                    localStorage.setItem('uploaded images', file);
+                    console.log(this.result);
+                } else {
+                    var placeholder = uploaded;
+                    localStorage.setItem('uploaded images', uploaded + "," + file);
+                    console.log(localStorage.getItem('uploaded images'));
+                }
 
                 }
                 // Ok, I don't handle the errors. An exercice for the reader.
@@ -201,49 +208,73 @@ var app = {
     },
     
     getImageInfo: function (data) {
-        data.getFile(fileName, {}, function (fileEntry) {
+       if(localStorage.getItem('uploaded images'))
+        {
+            var upload = localStorage.getItem('uploaded images');
+            var picture = upload.split(",");
+            var history = "";
+            var imgurLink = "";
+            var dataURL = "";
+            
+            
+            for(var p =0; p < picture.length; p++)
+            {
+                history = picture[p].replace(cordova.file.externalDataDirectory, "");
+                imgurLink = history;
+                
+                imgurLink = imgurLink.replace(".txt", ".jpg");
+                dataURL = 'http://i.imgur.com/'+imgurLink;
+                
+                console.log(history);
+                
+                data.getFile(history, {}, function (fileEntry) {
             
                 // Get a File object representing the file,
                 // then use FileReader to read its contents.
                 console.log("use result to represent file");
+                
                 fileEntry.file(function (file) 
                 {
                     console.log("create reader");
+                    console.log(file);
+                    
+                    var list = document.getElementById("historyList");
+                    list.innerHTML = "";
+                    
                     var reader = new FileReader();
                     
-
-                    reader.onload = function (e) {
-                    
+                    reader.onloadend = function (e)
+                    {  
+                    base64Code = this.result;
+                        
+                    var li = document.createElement("li");
+                    var img = document.createElement("img");
+                            
                         console.log("onload");
-                        var text = reader.result;
-                        if(text == "")
-                        {
-                            console.log("empty result");
-                        }
-                        else{
-                        console.log(text);
-                        }
+                        console.log("settting shit up!");
+                       var imgSrc = "data:image/jpeg;base64," + base64Code;
 
-               /*         //upload image history
-                        var uploaded = localStorage.getItem('uploaded images');
-                        if (uploaded == null) {
-                            localStorage.setItem('uploaded images', text);
-                            console.log(text);
-                        } else {
-                            var placeholder = uploaded;
-                            localStorage.setItem('uploaded images', uploaded + "," + text);
-                            console.log(localStorage.getItem('uploaded images'));
-                        }*/
+                        img.setAttribute('src',imgSrc );
+                        img.setAttribute('data-url', dataURL);
+                                 img.addEventListener("click", function()
+                                                      {
+                                     app.qrThisPic(this.getAttribute('data-url'));
+                                 });
+                    li.appendChild(img);
+                    list.appendChild(li);   
+                        
+                    
                     };
-                    reader.readAsText(file, "UTF-8");
+                    reader.readAsText(file);
             }, app.somethingDied);
-
         }, app.somethingDiedAgain);
+            }
+        }
     },
     
       somethingDiedAgain: function(data)
     {
-        console.log("you dun fucked");
+        console.log("you dun goofed");
     },
     
         somethingDied: function(data)
@@ -429,20 +460,10 @@ var app = {
     
     displayUploadHistory: function () {
 
-        if (localStorage.getItem('uploaded images')) {
-                var uploadedImages = localStorage.getItem('uploaded images');
-                var splitText = uploadedImages.split(",");
-                var list = document.getElementById("historyList");
-                for (var i = 0; i < splitText.length; i++) {
-                    var li = document.createElement("li");
-                    var img = document.createElement("img");
-                    img.src = splitText[i];
-
-                    li.appendChild(img);
-                    list.appendChild(li);
-                }
-
-            }
+       if (localStorage.getItem('uploaded images')) {
+                
+            window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied);
+    }
     },
 };
 
