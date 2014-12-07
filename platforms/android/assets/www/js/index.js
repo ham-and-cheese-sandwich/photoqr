@@ -151,6 +151,8 @@ var app = {
                 targetWidth: 1500,
                 targetHeight: 1500,
                 correctOrientation: true,
+                saveToPhotoAlbum: true,
+                quality: 75
             });
         },
 		   
