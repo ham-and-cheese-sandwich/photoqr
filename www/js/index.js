@@ -106,7 +106,7 @@ var app = {
     },
 	
     goToMainPage: function () {		
-		menu.className = "";
+		menu.className = "visible";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
 		picHistory.className = "hidden";
@@ -117,19 +117,19 @@ var app = {
 	goToAlbum: function(){
         menu.className = "hidden";
 		addingNew.className = "hidden";
-		photoAlbum.className = "";
+		photoAlbum.className = "visible";
 		picHistory.classList = "hidden";
 		showPicture.className = "hidden";
         app.displayPictureAlbum();
     },
 	
 	goToHistory: function () {		
+        app.displayUploadHistory();
 		menu.className = "hidden";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
 		showPicture.className = "hidden";
-		picHistory.className = "";
-        app.displayUploadHistory();
+		picHistory.className = "visible";
     },
 	
     takeDatPicYo: function () {
@@ -142,8 +142,10 @@ var app = {
                 saveFileImage = imageURI;
 //"data:image/jpeg;base64,"
                 menu.className = "hidden";
-                addingNew.className = "";
-                photoAlbum.className = "hidden";
+				addingNew.className = "visible";
+				photoAlbum.className = "hidden";
+				showPicture.className = "hidden";
+				picHistory.className = "hidden";
             }, function (message) {}, {
                 destinationType: Camera.DestinationType.DATA_URL,
                 targetWidth: 1500,
@@ -404,7 +406,7 @@ var app = {
         menu.className = "hidden";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
-		showPicture.className = "";
+		showPicture.className = "visible";
 		picHistory.className = "hidden";
         var frame = document.getElementById('frame');
         frame.innerHTML = "";

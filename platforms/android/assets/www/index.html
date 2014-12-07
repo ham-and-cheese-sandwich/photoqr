@@ -24,18 +24,20 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-		<!--<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>   -->     
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>   -->
+        <link rel="stylesheet" media="all and (orientation:portrait)" href="css/index.css">  
+		<link rel="stylesheet" media="all and (orientation:landscape)" href="css/landscape.css">     
         <link href="stylesheets/font-awesome.css" rel="stylesheet" type="text/css" />
+ 
         <title>PhotoQR</title>
     </head>
     <body>
         <div class="app">        
             
-            <div id="menu">
+            <div id="menu" class="visible">
             	<header>
                     <h1>Photo<span id="headerwrd">Bitches</span></h1>  
-                    <h3>Share Pictures Using QR</h3>                
+                    <h3>Share photos simply using QR code</h3>                
                 </header> 
                 <div class="maincontainer">
                     <button id="takePicture" class="homebutton">
@@ -45,21 +47,21 @@
                     </button> 
                    
                     <button id="getPicture" class="homebutton">
-                    <i class="icon-qrcode icon-3x"></i>
-                    <br>
-                    Get a Picture
+                        <i class="icon-qrcode icon-3x"></i>
+                        <br>
+                        Get a Picture
                     </button>
                     
                     <button id="albumPicture" class="homebutton">
-                    <i class="icon-picture icon-3x"></i>
-                    <br>
-                    Photo Album
+                        <i class="icon-picture icon-3x"></i>
+                        <br>
+                        Downloaded Photos
                     </button>
                     
                     <button id="prevPicture" class="homebutton">
-                    <i class="icon-time icon-3x"></i>
-                    <br>
-                    Picture History
+                        <i class="icon-time  icon-3x"></i>
+                        <br>
+                        Uploaded Photos
                     </button>  
                 </div>
            		 
@@ -92,7 +94,7 @@
             	<header id="navheader">
                     <h2>Photo<span id="headerwrd">Bitches</span></h2>
                     <a class = "back icon-arrow-left left" ></a>
-                    <h4>Photo Album</h4>
+                    <h4>Downloaded Photos</h4>
                                       
                 </header> 
                 <div class="container">
@@ -116,7 +118,7 @@
             	<header id="navheader">
                     <h2>Photo<span id="headerwrd">Bitches</span></h2>
                      <a class = "back icon-arrow-left left" ></a> 
-                    <h4>Picture History</h4>                 
+                    <h4>Uploaded Photos</h4>                 
                 </header> 
                 <div class="container">
                     <ul id="historyList">

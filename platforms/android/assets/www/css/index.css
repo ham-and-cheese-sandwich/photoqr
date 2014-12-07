@@ -39,9 +39,14 @@ time, mark, audio, video {
 
 body{
 	min-height:100%;
+	background: #333;
 }
 head {
 	height: 100%;
+}
+
+html{
+	background: #333;
 }
 
 .app{
@@ -65,8 +70,11 @@ table {
   border-spacing: 0;
 }
 
-.hidden{
-  display: none;
+.visible {
+
+}
+.hidden {
+display:none;
 }
 
 .show{
@@ -81,27 +89,28 @@ header{
 }
 
 header h1{
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  padding-top: 23px;
-  font-size: 65px;
-  color:#ffffff;
-  text-shadow: 2px 2px #222222;
-  font-family: 'Oleo Script', cursive;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding-top: 5%;
+	font-size: 400%;
+	color:#ffffff;
+	text-shadow: 2px 2px #222222;
+	font-family: 'Oleo Script', cursive;
 }
 
 #headerwrd{
-	color:#ff5242;
+	color:#FF554F;
 }
 
 header a{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding-top: 4.6vh;
-  right: 1%;
-  color:#ffffff;
+	position: absolute;
+	top: 4.6%;
+	width: 100%;
+	right: 1%;
+	color:#ffffff;
+	text-shadow: 2px 2px #222222;
+	font-size: 135%;
 }
 
 .left{
@@ -112,7 +121,7 @@ header h2{
 	margin: 0 auto;
 	display: block;
 	text-align: center;
-	font-size: 40px;
+	font-size: 230%;
 	color:#ffffff;
 	text-shadow: 2px 2px #222222;
 	font-family: 'Oleo Script', cursive;
@@ -122,8 +131,8 @@ header h4{
 	margin: 0 auto;
 	display: block;
 	text-align: center;
-	font-size: 25px;
-	margin-top: -15px;
+	font-size: 145%;
+	margin-top: -4%;
 	color:#ffffff;
 	text-shadow: 2px 2px #222222;
 	font-family: 'Oleo Script', cursive;
@@ -133,8 +142,8 @@ header h3{
 	margin: 0 auto;
 	display: block;
 	text-align: center;
-	font-size: 25px;
-	margin-top: -15px;
+	font-size: 155%;
+	margin-top: -4%;
 	color:#ffffff;
 	text-shadow: 2px 2px #2b2b2b;
 	font-family: 'Oleo Script', cursive;
@@ -157,31 +166,18 @@ header h3{
 
 }
 
-.back{
-	text-shadow: 2px 2px #222222;
-	font-size: 1.4em;
-}
-
-#backshow{
-	text-shadow: 2px 2px #222222;
-	font-size: 1.4em;
-}
-
 /***BUTTONS***/
 .homebutton{
 	color: #ffffff;
 	border-color: 3px solid #333333;
-	background: #ff5242; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ff5242 0%, #EA1E1E 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5242), color-stop(100%,#EA1E1E)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ff5242 0%,#EA1E1E 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5242', endColorstr='#EA1E1E',GradientType=0 ); /* IE6-9 */
-	
-	width: 140px;
-	height: 140px;
+	background: #FF554F; /* Old browsers */
+	background: -moz-linear-gradient(top,  #FF554F 0%, #b52222 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF554F), color-stop(100%,#b52222)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #FF554F 0%,#b52222 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #FF554F 0%,#b52222 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #FF554F 0%,#b52222 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #FF554F 0%,#b52222 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF554F', endColorstr='#b52222',GradientType=0 ); /* IE6-9 */
 	border: none;
 	outline:none;
 	border-radius:4px;
@@ -193,43 +189,38 @@ header h3{
 	text-shadow:0px 2px 0px rgba(0, 0, 0, 0.4);
 	box-shadow: 2px 2px #222222;
 	font-size: 17px;
+	width: 42%;
+	height: 38%;
 }
 
 .button{
 	color: #ffffff;
 	border-color: 3px solid #333333;
-	background: #ff5242; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ff5242 0%, #EA1E1E 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff5242), color-stop(100%,#EA1E1E)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ff5242 0%,#EA1E1E 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  #ff5242 0%,#EA1E1E 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5242', endColorstr='#EA1E1E',GradientType=0 ); /* IE6-9 */
+	background: #FF554F; /* Old browsers */
+	background: -moz-linear-gradient(top,  #FF554F 0%, #b52222 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF554F), color-stop(100%,#b52222)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #FF554F 0%,#b52222 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #FF554F 0%,#b52222 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #FF554F 0%,#b52222 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #FF554F 0%,#b52222 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF554F', endColorstr='#b52222',GradientType=0 ); /* IE6-9 */
 	
-	width: 200px;
-	height: 40px;
+	width: 70%;
+	height: 9%;
 	border: none;
-	outline:none;
-	border-radius:4px;
+	outline: none;
+	border-radius: 4px;
 	font-family: 'Oleo Script', cursive;
 	font-weight: 200;
-	
-	margin:8px;
-	padding:0px;
-	text-shadow:0px 2px 0px rgba(0, 0, 0, 0.4);
+	margin: 5px 15px;
+	padding: 0px;
+	text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.4);
 	box-shadow: 2px 2px #222222;
-	font-size: 18px;
+	font-size: 125%;
 }
 
-#takePicture #getPicture{
-	float:right;
-	
-}
+/***CONTAINERS***/
 
-#albumPicture #prevPicture{
-	float:right;
-}
 .maincontainer{
 	text-align: center;
 	height:70vh;
@@ -241,18 +232,21 @@ header h3{
 	overflow: overlay;
 }
 
-#addingNew, #menu{
-	height: 100vh;
+#addingNew, #menu, #photoAlbum, #picHistory, #showPicture{
+	height: 100%;
 }
+
+
 
 /***IMAGE***/
 #myImage{
-	max-width: 300px;
-	max-height: 350px;
+	max-width: 95%;
+	max-height: 74%;
 	margin: auto 0;
 	margin-top: 10px;
 }
 
+/***LISTS***/
 
 #historyList li, #picList li{
 	max-width: 28%;
@@ -262,7 +256,7 @@ header h3{
 	float: left;
 	border: 3px solid rgb(230, 230, 230);
 	border-radius: 2px;
-	margin: 5px;
+	margin: 5px 5.3px;
 	box-shadow: 2px 2px #212121;
 }
 
