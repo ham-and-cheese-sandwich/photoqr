@@ -105,11 +105,13 @@ var app = {
     },
 	
     goToMainPage: function () {		
+        console.log("here");
 		menu.className = "visible";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
 		picHistory.className = "hidden";
 		showPicture.className = "hidden";
+        document.getElementById('loader').style.display = "none";
 
     },
 	
@@ -312,8 +314,13 @@ var app = {
                   //pop again to get the file name
                   var fileName = resultChecker.pop();
                   // get rid of the '/'
-                  fileName = fileName.split("/");
-                  fileName = fileName[1];
+                  
+                  if(fileName){
+                        fileName = fileName.split("/");
+                        fileName = fileName[1];    
+                  }
+                  
+                  
                   if (imageType == "jpg"){
 
                       var image = document.getElementById('myImage');
@@ -352,10 +359,15 @@ var app = {
                       pathForViewing = path;
 
                   }else{
-                      alert("Invalid QR Code, must be a jpg");   
+                      
+                      document.getElementById('loader').style.display = "none";
+                      
                   }
               }, 
               function (error) {
+                  
+                  document.getElementById('loader').style.display = "none";
+                  
                   alert("Scanning failed: " + error);
               }
            );
@@ -393,23 +405,24 @@ var app = {
             var viewImage = document.getElementsByClassName("viewImage");
             for(var i=0;i<viewImage.length;i++){
                 viewImage[i].addEventListener("click",function(){
-                    app.imageScreen(this.lastElementChild.src);   
+                    pathForViewing = this.lastElementChild.src; 
                 },true);
             }
         }
     },
     
-    imageScreen: function(html){ 
+    imageScreen: function(){ 
         menu.className = "hidden";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
 		showPicture.className = "visible";
 		picHistory.className = "hidden";
+        
         var frame = document.getElementById('frame');
         frame.innerHTML = "";
         
         var img = document.createElement("img");
-        img.src = html;
+        img.src = pathForViewing;
         frame.appendChild(img);
         
     },
