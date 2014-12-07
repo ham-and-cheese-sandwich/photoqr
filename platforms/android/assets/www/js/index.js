@@ -28,6 +28,7 @@ var saveFileImage = "";
 var saveFileName = "";
 var base64Code = "";
 var fileName = "";
+var pathForViewing = "";
 
 var app = {
     
@@ -92,7 +93,6 @@ var app = {
         var historybtn = document.getElementById("prevPicture");
             historybtn.addEventListener("click", function() {
                 app.goToHistory();
-                console.log("click");
         }, true);
         
         var decodebtn = document.getElementById("getPicture");
@@ -102,7 +102,6 @@ var app = {
 	 
     decodeQR: function() {
             app.picThisQr();
-            console.log("decode click");
     },
 	
     goToMainPage: function () {		
@@ -182,13 +181,11 @@ var app = {
                 saveFileName = linkHolder.pop();
                 saveFileName = saveFileName.split("/");
                 saveFileName = saveFileName[1];
-                console.log(saveFileName);
                 window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.gotFS, app.failFS);
 
                 document.body.className = "uploaded";
 
                 fileName = saveFileName + ".txt";
-                console.log(fileName);
                 var file = cordova.file.externalDataDirectory + fileName;
                 var uploaded = localStorage.getItem('uploaded images');
                 if (uploaded == null) {
@@ -197,7 +194,6 @@ var app = {
                 } else {
                     var placeholder = uploaded;
                     localStorage.setItem('uploaded images', uploaded + "," + file);
-                    console.log(localStorage.getItem('uploaded images'));
                 }
 
                 }
@@ -229,18 +225,14 @@ var app = {
                 imgurLink = imgurLink.replace(".txt", ".jpg");
                 dataURL = 'http://i.imgur.com/'+imgurLink;
                 
-                console.log(history);
                 
                 data.getFile(history, {}, function (fileEntry) {
             
                 // Get a File object representing the file,
                 // then use FileReader to read its contents.
-                console.log("use result to represent file");
                 
                 fileEntry.file(function (file) 
                 {
-                    console.log("create reader");
-                    console.log(file);
                     
                     var list = document.getElementById("historyList");
                     list.innerHTML = "";
@@ -249,24 +241,21 @@ var app = {
                     
                     reader.onloadend = function (e)
                     {  
-                    base64Code = this.result;
-                        
-                    var li = document.createElement("li");
-                    var img = document.createElement("img");
-                            
-                        console.log("onload");
-                        console.log("settting shit up!");
-                       var imgSrc = "data:image/jpeg;base64," + base64Code;
+                        base64Code = this.result;
+
+                        var li = document.createElement("li");
+                        var img = document.createElement("img");
+
+                        var imgSrc = "data:image/jpeg;base64," + base64Code;
 
                         img.setAttribute('src',imgSrc );
                         img.setAttribute('data-url', dataURL);
-                                 img.addEventListener("click", function()
-                                                      {
-                                     app.qrThisPic(this.getAttribute('data-url'));
-                                 });
-                    li.appendChild(img);
-                    list.appendChild(li);   
-                        
+                        img.addEventListener("click", function(){
+                            app.qrThisPic(this.getAttribute('data-url'));
+                        });
+
+                        li.appendChild(img);
+                        list.appendChild(li);   
                     
                     };
                     reader.readAsText(file);
@@ -312,6 +301,8 @@ var app = {
         
             cordova.plugins.barcodeScanner.scan(
               function (result) {
+                  
+                  document.getElementById('loader').style.display = "block";
 
                   //These get the link's details
                   //Splits via '.', seperating the main domain's link, and final extension
@@ -330,22 +321,35 @@ var app = {
                       trans = new FileTransfer();
                       var path = cordova.file.externalDataDirectory+fileName+".jpg";
 
-                      trans.download(result.text, path , app.downloadSuccess, app.downloadError);
+                      trans.download(
+                          result.text, 
+                          path,
+                          function(entry) {
+                              app.imageScreen(pathForViewing);
+                              console.log(entry.toURL());
+                              
+                              document.getElementById('loader').style.display = "none";
+                          }, 
+                          function(entry) {
+                              alert("There was an error downloading the picture");
+                              
+                              document.getElementById('loader').style.display = "none";
+                          }
+                      );
 
                       //saves the file paths into local storage, this will help for getting picture item          
                       var saved = localStorage.getItem('saved images', path);
                       if(saved == null)
                       {
-                          console.log("local storage is empty");
                           localStorage.setItem('saved images', path);
                       }
                       else
                       {
-                          console.log("local storage contains images");
                           var placeholder = saved;
                           localStorage.setItem('saved images', saved+","+path);
-                          console.log(localStorage.getItem('saved images'));
                       }
+                      
+                      pathForViewing = path;
 
                   }else{
                       alert("Invalid QR Code, must be a jpg");   
@@ -360,15 +364,6 @@ var app = {
            alert("No network connection, an internet connection is required");
         }
     
-    },
-    
-    downloadSuccess: function(entry){
-        alert("It is downloaded!");  
-        
-    },
-    
-    downloadError: function(error){
-        alert(error);
     },
     
     displayPictureAlbum: function(){
