@@ -219,7 +219,8 @@ var app = {
             var dataURL = "";
             
             console.log("LS stuff: "+upload);
-                             var counter = 0;
+                             
+            var counter = 0;
 
             for(var p =0; p < picture.length; p++)
             {
@@ -262,6 +263,10 @@ var app = {
                         
                         img.addEventListener("click", function(){
                             app.qrThisPic(this.getAttribute('data-url'));
+                        });
+                        
+                        img.addEventListener("mouseup", function(){
+                            clearTimeout(pressTimer);
                         });
                         
                         img.addEventListener("mousedown", function(){
@@ -428,10 +433,31 @@ var app = {
             //on click ---> show larger image, give option to share
             var viewImage = document.getElementsByClassName("viewImage");
             for(var i=0;i<viewImage.length;i++){
+                
                 viewImage[i].addEventListener("click",function(){
                     pathForViewing = this.lastElementChild.src; 
                     app.imageScreen(pathForViewing);
                 },true);
+                
+                viewImage[i].addEventListener("mouseup", function(){
+                    clearTimeout(pressTimer);
+                });
+                        
+                viewImage[i].addEventListener("mousedown", function(){
+                    pressTimer = window.setTimeout(function(){
+
+                        var txt;
+
+                        var r = confirm ("would you like to delete this photo?");
+                        if (r == true){
+                            alert("delete the photo");
+                        }else{
+                            alert("cancel");
+                        }
+
+                   }),1000 
+                });
+                
             }
         }
     },
