@@ -219,7 +219,8 @@ var app = {
             var dataURL = "";
             
             console.log("LS stuff: "+upload);
-                             var counter = 0;
+                             
+            var counter = 0;
 
             for(var p =0; p < picture.length; p++)
             {
@@ -262,6 +263,26 @@ var app = {
                         
                         img.addEventListener("click", function(){
                             app.qrThisPic(this.getAttribute('data-url'));
+                        });
+                        
+                        img.addEventListener("mouseup", function(){
+                            clearTimeout(pressTimer);
+                        });
+                        
+                        img.addEventListener("mousedown", function(){
+                            //Delete photo here!
+                            pressTimer = window.setTimeout(function(){
+                           
+                                var txt;
+                                
+                                var r = confirm ("would you like to delete this photo?");
+                                if (r == true){
+                                    alert("delete the photo");
+                                }else{
+                                    alert("cancel");
+                                }
+                           
+                           }),1000 
                         });
 
                         li.appendChild(img);
@@ -413,12 +434,87 @@ var app = {
             //on click ---> show larger image, give option to share
             var viewImage = document.getElementsByClassName("viewImage");
             for(var i=0;i<viewImage.length;i++){
+                
                 viewImage[i].addEventListener("click",function(){
                     pathForViewing = this.lastElementChild.src; 
                     app.imageScreen(pathForViewing);
                 },true);
+                
+                viewImage[i].addEventListener("mouseup", function(){
+                    clearTimeout(pressTimer);
+                });
+                        
+                viewImage[i].addEventListener("mousedown", function(){
+                    var selected = this.lastElementChild.src; 
+
+                    //Delete photo here!
+                    var del = false;
+                    pressTimer = window.setTimeout(function(){
+
+                        var txt;
+                        console.log(selected);
+                        
+                        var r = confirm ("would you like to delete this photo?");
+                        if (r == true){
+                            alert("delete the photo");
+                            if(localStorage.getItem('saved images', selected))
+                            {
+                                console.log("getting LS item "+selected);
+                                
+                                var ls_path = localStorage.getItem('saved images');
+                                var split = ls_path.split(",");
+                                
+                                for(var i=0; i < split.length; i++)
+                                {
+                                    console.log(split[i]);
+                                    if(split[i] == selected)
+                                    {
+                                        split.splice(i, 1);
+                                        i--;
+                                    }
+                                }
+                                var newLS = split.toString();
+                                
+                                localStorage.removeItem("saved images");
+                                localStorage.setItem("saved images", newLS);
+                                del = true;
+
+     
+                                window.resolveLocalFileSystemURL(selected, app.deletePicture, app.failedDelete);
+                            }                       
+                        }else{
+                            alert("cancel");
+                        }
+                   }),1000 
+                    if (del){
+                        this.parent.removeChild(this);
+                    }
+                });
+                
             }
         }
+    },
+    
+    deletePicture: function(fileEntry) 
+    {
+        console.log(fileEntry);
+        fileEntry.remove(app.success, app.delete);
+    },
+    
+    failedDelete: function(fileEntry)
+    {
+        console.log("Deletion failed");
+    },
+    
+    success: function()
+    {
+        console.log("delete success");
+        app.displayPictureAlbum();
+    },
+    
+    delete: function()
+    {
+        console.log("delete didn't work");
     },
     
     imageScreen: function(){ 
@@ -485,7 +581,7 @@ var app = {
        if (localStorage.getItem('uploaded images')) {
                 
             window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied);
-    }
+        }
     },
 };
 
