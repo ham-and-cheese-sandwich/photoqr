@@ -110,7 +110,6 @@ var app = {
         picHistory.className = "hidden";
         showPicture.className = "hidden";
         document.getElementById('loader').style.display = "none";
-
     },
 
     goToAlbum: function() {
@@ -202,7 +201,7 @@ var app = {
             xhr.send(fd);
 
         } else {
-            alert("No network connection, an internet connection is required");
+            alert("No network connection, an internet connection is required.");
         }
     },
 
@@ -249,7 +248,7 @@ var app = {
                                     var del = false;
                                     pressTimer = window.setTimeout(function () {
                                         var txt;
-                                        var r = confirm("would you like to delete this photo?");
+                                        var r = confirm("Would you like to delete this photo?");
                                         if (r == true) {
                                             if (localStorage.getItem('uploaded images', filePath)) {
                                                 var ls_path = localStorage.getItem('uploaded images');
@@ -366,7 +365,7 @@ var app = {
                                     document.getElementById('loader').style.display = "none";
                                 },
                                 function(entry) {
-                                    alert("There was an error downloading the picture");
+                                    alert("There was an error downloading the picture.");
 
                                     document.getElementById('loader').style.display = "none";
                                 }
@@ -383,7 +382,7 @@ var app = {
 
                             pathForViewing = path;
                         } else {
-                            alert("This image has already been downloaded, go to your photo album to see downloaded images.");
+                            alert("This image has already been downloaded, go to Downloaded Photos to see your downloaded images.");
                             document.getElementById('loader').style.display = "none";
                         }
 
@@ -406,7 +405,7 @@ var app = {
             );
 
         } else {
-            alert("No network connection, an internet connection is required");
+            alert("No network connection, an internet connection is required.");
         }
 
     },
@@ -457,7 +456,7 @@ var app = {
 
                         var txt;
 
-                        var r = confirm("would you like to delete this photo?");
+                        var r = confirm("Would you like to delete this photo?");
                         if (r == true) {
                             if (localStorage.getItem('saved images', selected)) {
 
