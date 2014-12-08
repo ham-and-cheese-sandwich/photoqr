@@ -263,6 +263,21 @@ var app = {
                         img.addEventListener("click", function(){
                             app.qrThisPic(this.getAttribute('data-url'));
                         });
+                        
+                        img.addEventListener("mousedown", function(){
+                            pressTimer = window.setTimeout(function(){
+                           
+                                var txt;
+                                
+                                var r = confirm ("would you like to delete this photo?");
+                                if (r == true){
+                                    alert("delete the photo");
+                                }else{
+                                    alert("cancel");
+                                }
+                           
+                           }),1000 
+                        });
 
                         li.appendChild(img);
                         list.appendChild(li);   
@@ -485,7 +500,7 @@ var app = {
        if (localStorage.getItem('uploaded images')) {
                 
             window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied);
-    }
+        }
     },
 };
 

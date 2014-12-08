@@ -214,34 +214,40 @@ var app = {
             var upload = localStorage.getItem('uploaded images');
             var picture = upload.split(",");
             var history = "";
-            var imgurLink = "";
+            var LSlength = picture.length;
+            var url = [];
             var dataURL = "";
             
-            
+            console.log("LS stuff: "+upload);
+                             var counter = 0;
+
             for(var p =0; p < picture.length; p++)
             {
                 history = picture[p].replace(cordova.file.externalDataDirectory, "");
-                imgurLink = history;
                 
-                imgurLink = imgurLink.replace(".txt", ".jpg");
-                dataURL = 'http://i.imgur.com/'+imgurLink;
-                
-                
+                url[p] = history.replace(".txt", ".jpg");
+
                 data.getFile(history, {}, function (fileEntry) {
-            
+                
+                    
                 // Get a File object representing the file,
                 // then use FileReader to read its contents.
-                
                 fileEntry.file(function (file) 
                 {
-                    
+ 
                     var list = document.getElementById("historyList");
+                              
+                    
                     list.innerHTML = "";
-                    
                     var reader = new FileReader();
-                    
+
                     reader.onloadend = function (e)
                     {  
+                    if(counter < LSlength)
+                    {
+                    dataURL = 'http://i.imgur.com/'+url[counter];                   
+                        
+                        
                         base64Code = this.result;
 
                         var li = document.createElement("li");
@@ -251,13 +257,32 @@ var app = {
 
                         img.setAttribute('src',imgSrc );
                         img.setAttribute('data-url', dataURL);
+                        
+                        counter++;
+                        
                         img.addEventListener("click", function(){
                             app.qrThisPic(this.getAttribute('data-url'));
+                        });
+                        
+                        img.addEventListener("mousedown", function(){
+                            pressTimer = window.setTimeout(function(){
+                           
+                                var txt;
+                                
+                                var r = confirm ("would you like to delete this photo?");
+                                if (r == true){
+                                    alert("delete the photo");
+                                }else{
+                                    alert("cancel");
+                                }
+                           
+                           }),1000 
                         });
 
                         li.appendChild(img);
                         list.appendChild(li);   
-                    
+                    }
+
                     };
                     reader.readAsText(file);
             }, app.somethingDied);
@@ -475,7 +500,7 @@ var app = {
        if (localStorage.getItem('uploaded images')) {
                 
             window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied);
-    }
+        }
     },
 };
 
