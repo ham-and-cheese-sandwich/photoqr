@@ -105,7 +105,6 @@ var app = {
     },
 	
     goToMainPage: function () {		
-        console.log("here");
 		menu.className = "visible";
 		addingNew.className = "hidden";
 		photoAlbum.className = "hidden";
@@ -406,6 +405,7 @@ var app = {
             for(var i=0;i<viewImage.length;i++){
                 viewImage[i].addEventListener("click",function(){
                     pathForViewing = this.lastElementChild.src; 
+                    app.imageScreen(pathForViewing);
                 },true);
             }
         }
