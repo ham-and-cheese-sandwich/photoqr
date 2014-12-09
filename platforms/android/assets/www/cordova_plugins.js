@@ -65,6 +65,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/nl.x-services.plugins.socialsharing/www/SocialSharing.js",
+        "id": "nl.x-services.plugins.socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -218,6 +225,7 @@ module.exports.metadata =
     "org.apache.cordova.file-transfer": "0.4.7",
     "com.phonegap.plugins.barcodescanner": "2.0.1",
     "org.apache.cordova.network-information": "0.2.13",
+    "nl.x-services.plugins.socialsharing": "4.3.11",
     "org.apache.cordova.file": "1.3.1"
 }
 // BOTTOM OF METADATA

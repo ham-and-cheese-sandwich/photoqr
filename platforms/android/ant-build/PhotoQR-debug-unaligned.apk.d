@@ -1,5 +1,5 @@
-C:\Users\Jessica\MAD9135\photoqr\platforms\android\ant-build\PhotoQR-debug-unaligned.apk : \
-C:\Users\Jessica\MAD9135\photoqr\platforms\android\ant-build\PhotoQR.ap_ \
-C:\Users\Jessica\MAD9135\photoqr\platforms\android\ant-build\classes.dex \
-C:\Users\Jessica\MAD9135\photoqr\platforms\android\CordovaLib\ant-build\classes.jar \
-C:\Users\Jessica\MAD9135\photoqr\platforms\android\libs\com.google.zxing.client.android.captureactivity.jar \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalFuckingGodDamnitShitShitShit\platforms\android\ant-build\PhotoQR-debug-unaligned.apk : \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalFuckingGodDamnitShitShitShit\platforms\android\ant-build\PhotoQR.ap_ \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalFuckingGodDamnitShitShitShit\platforms\android\ant-build\classes.dex \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalFuckingGodDamnitShitShitShit\platforms\android\CordovaLib\ant-build\classes.jar \
+C:\Users\Chad Maron\Documents\MADD\MAD9135 - HTML 5 Mobile Dev\FinalFuckingGodDamnitShitShitShit\platforms\android\libs\com.google.zxing.client.android.captureactivity.jar \

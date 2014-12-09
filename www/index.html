@@ -49,6 +49,7 @@
                     <h3>Share photos simply using QR code</h3>                
                 </header> 
                 <div class="maincontainer">
+                    <button onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
                     <button id="takePicture" class="homebutton">
                     	<i class="icon-camera-retro icon-3x"></i>
                         <br>
@@ -128,5 +129,6 @@
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
     </body>
 </html>
