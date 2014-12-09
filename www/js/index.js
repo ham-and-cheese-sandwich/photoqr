@@ -180,12 +180,12 @@ var app = {
                     saveFileName = linkHolder.pop();
                     saveFileName = saveFileName.split("/");
                     saveFileName = saveFileName[1];
-                    window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.gotFS, app.failFS);
+                    window.resolveLocalFileSystemURL(cordova.file.dataDirectory, app.gotFS, app.failFS);
 
                     document.body.className = "uploaded";
 
                     fileName = saveFileName + ".txt";
-                    var file = cordova.file.externalDataDirectory + fileName;
+                    var file = cordova.file.dataDirectory + fileName;
                     var uploaded = localStorage.getItem('uploaded images');
                     if (uploaded == null) {
                         localStorage.setItem('uploaded images', file);
@@ -215,7 +215,7 @@ var app = {
             var dataURL = "";
             var counter = 0;
             for (var p = 0; p < picture.length; p++) {
-                history = picture[p].replace(cordova.file.externalDataDirectory, "");
+                history = picture[p].replace(cordova.file.dataDirectory, "");
                 url[p] = history.replace(".txt", ".jpg");
                 data.getFile(history, {}, function (fileEntry) {
                     // Get a File object representing the file,
@@ -242,7 +242,7 @@ var app = {
                                 });
                                 img.addEventListener("mousedown", function () {
                                     var selected = this.getAttribute("data-url");
-                                    var file = selected.replace("http://i.imgur.com/", cordova.file.externalDataDirectory);
+                                    var file = selected.replace("http://i.imgur.com/", cordova.file.dataDirectory);
                                     var filePath = file.replace(".jpg", ".txt");
                                     //Delete photo here!
                                     var del = false;
@@ -355,7 +355,7 @@ var app = {
                             var image = document.getElementById('myImage');
                             image.src = result.text;
                             trans = new FileTransfer();
-                            var path = cordova.file.externalDataDirectory + fileName + ".jpg";
+                            var path = cordova.file.dataDirectory + fileName + ".jpg";
 
                             trans.download(
                                 result.text,
@@ -580,7 +580,7 @@ var app = {
 
         if (localStorage.getItem('uploaded images')) {
 
-            window.resolveLocalFileSystemURL(cordova.file.externalDataDirectory, app.getImageInfo, app.somethingDied);
+            window.resolveLocalFileSystemURL(cordova.file.dataDirectory, app.getImageInfo, app.somethingDied);
         }
     },
     
