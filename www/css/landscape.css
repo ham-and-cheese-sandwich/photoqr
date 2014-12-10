@@ -37,8 +37,8 @@ time, mark, audio, video {
   overflow: hidden;
 }
 
-body{
-	min-height:100%;
+body, html{
+	height:100%;
 }
 head {
 	height: 100%;
@@ -221,7 +221,7 @@ header h3{
 
 .container {
 	text-align: center;
-	height: 80vh;
+	height: 100%;
 	overflow: overlay;
 }
 
@@ -259,7 +259,12 @@ header h3{
 
 #frame img{
     max-width: 100%;
-    max-height: 100%;
+    max-height: 65%;
+    margin-top: 1%;
+}
+
+#shareArea{
+    text-align: center;
 }
 
 /***Spinner***/

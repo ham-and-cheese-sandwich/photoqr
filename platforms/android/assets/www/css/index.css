@@ -228,8 +228,6 @@ header h3{
 
 .container {
 	text-align: center;
-	height: 87vh;
-	overflow: overlay;
 }
 
 #addingNew, #menu, #photoAlbum, #picHistory, #showPicture{
@@ -244,6 +242,10 @@ header h3{
 	max-height: 74%;
 	margin: auto 0;
 	margin-top: 10px;
+}
+
+#shareArea{
+    text-align: center;
 }
 
 /***LISTS***/
@@ -267,7 +269,8 @@ header h3{
 
 #frame img{
     max-width: 100%;
-    max-height: 100%;
+    max-height: 79%;
+    margin-top: 1%;
 }
 
 /***Spinner***/

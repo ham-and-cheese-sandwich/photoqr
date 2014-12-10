@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"SocialSharing\"><param name=\"android-package\" value=\"nl.xservices.plugins.SocialSharing\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -579,6 +583,9 @@
             "PACKAGE_NAME": "com.algonquincollege.photoQR"
         },
         "nl.x-services.plugins.socialsharing": {
+            "PACKAGE_NAME": "com.algonquincollege.photoQR"
+        },
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.algonquincollege.photoQR"
         }
     },

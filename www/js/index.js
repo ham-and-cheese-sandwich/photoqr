@@ -28,6 +28,7 @@ var saveFileName = "";
 var base64Code = "";
 var fileName = "";
 var pathForViewing = "";
+var dataDirectory = "";
 
 var app = {
 
@@ -48,7 +49,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        app.setUpButtonListeners();
+        app.setUpButtonListeners();        
+        
+        if(device.platform == "Android"){
+            dataDirectory = cordova.file.externalDataDirectory;   
+        }else{
+            dataDirectory = cordova.file.dataDirectory; 
+        }
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -76,6 +84,20 @@ var app = {
         picAgainbtn.addEventListener("click", function() {
             app.takeDatPicYo();
         }, true);
+        
+        document.addEventListener("backbutton", function() {
+            
+            if(showPicture.className != "hidden"){
+                app.goToAlbum();
+            }
+            else if (menu.className != "visible") {
+                app.goToMainPage();
+            } else {
+                navigator.app.exitApp();
+            }
+        
+        }, true);
+
 
         var buttonBack = document.getElementsByClassName("back");
         for (var i = 0; i < buttonBack.length; i++) {
@@ -180,12 +202,12 @@ var app = {
                     saveFileName = linkHolder.pop();
                     saveFileName = saveFileName.split("/");
                     saveFileName = saveFileName[1];
-                    window.resolveLocalFileSystemURL(cordova.file.dataDirectory, app.gotFS, app.failFS);
+                    window.resolveLocalFileSystemURL(dataDirectory, app.gotFS, app.failFS);
 
                     document.body.className = "uploaded";
 
                     fileName = saveFileName + ".txt";
-                    var file = cordova.file.dataDirectory + fileName;
+                    var file = dataDirectory + fileName;
                     var uploaded = localStorage.getItem('uploaded images');
                     if (uploaded == null) {
                         localStorage.setItem('uploaded images', file);
@@ -215,7 +237,7 @@ var app = {
             var dataURL = "";
             var counter = 0;
             for (var p = 0; p < picture.length; p++) {
-                history = picture[p].replace(cordova.file.dataDirectory, "");
+                history = picture[p].replace(dataDirectory, "");
                 url[p] = history.replace(".txt", ".jpg");
                 data.getFile(history, {}, function (fileEntry) {
                     // Get a File object representing the file,
@@ -242,7 +264,7 @@ var app = {
                                 });
                                 img.addEventListener("mousedown", function () {
                                     var selected = this.getAttribute("data-url");
-                                    var file = selected.replace("http://i.imgur.com/", cordova.file.dataDirectory);
+                                    var file = selected.replace("http://i.imgur.com/", dataDirectory);
                                     var filePath = file.replace(".jpg", ".txt");
                                     //Delete photo here!
                                     var del = false;
@@ -355,7 +377,7 @@ var app = {
                             var image = document.getElementById('myImage');
                             image.src = result.text;
                             trans = new FileTransfer();
-                            var path = cordova.file.dataDirectory + fileName + ".jpg";
+                            var path = dataDirectory + fileName + ".jpg";
 
                             trans.download(
                                 result.text,
@@ -529,6 +551,15 @@ var app = {
         var img = document.createElement("img");
         img.src = pathForViewing;
         frame.appendChild(img);
+        
+        var button = document.createElement('button');
+        button.setAttribute('onclick', "window.plugins.socialsharing.share(null, null, '" + pathForViewing + "', null)");
+        button.appendChild(document.createTextNode("Share"));
+        button.className = "button";
+        
+        document.getElementById("shareArea").innerHTML = "";
+        
+        document.getElementById("shareArea").appendChild(button);
 
     },
 
@@ -580,7 +611,7 @@ var app = {
 
         if (localStorage.getItem('uploaded images')) {
 
-            window.resolveLocalFileSystemURL(cordova.file.dataDirectory, app.getImageInfo, app.somethingDied);
+            window.resolveLocalFileSystemURL(dataDirectory, app.getImageInfo, app.somethingDied);
         }
     },
     
