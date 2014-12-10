@@ -3,10 +3,10 @@ photoqr
 
 Original Authors
 -------
-Joey Pelletier
-Demi Tremblay
-Chad Maron
-Jessica Coulas
+- Joey Pelletier
+- Demi Tremblay
+- Chad Maron
+- Jessica Coulas
 
 Description
 -----------
