@@ -172,7 +172,7 @@ var app = {
             targetHeight: 1500,
             correctOrientation: true,
             saveToPhotoAlbum: true,
-            quality: 75
+            quality: 100
         });
     },
 
