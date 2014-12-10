@@ -42,3 +42,8 @@ be scanned.
  
 Follow all of the steps from "view downloaded images. Then select the "share" button at the bottom of the page and from
 here you will be able to send the file anywhere you like.
+
+ - Delete an image 
+ 
+In the iage or upload history gallery, long press an image you would like to delete, this will bring up a prompt asking
+you to confirm the deletion.
