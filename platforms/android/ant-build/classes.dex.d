@@ -1,5 +1,6 @@
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes.dex : \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\BuildConfig.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\CordovaApp.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\PhotoQR.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\R$array.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\R$attr.class \
@@ -13,6 +14,21 @@ c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincol
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\R$string.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\R$xml.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR\R.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\BuildConfig.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\CordovaApp.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\PhotoQR.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$array.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$attr.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$color.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$dimen.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$drawable.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$id.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$layout.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$menu.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$raw.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$string.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R$xml.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\algonquincollege\photoQR1\R.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\com\phonegap\plugins\barcodescanner\BarcodeScanner.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\nl\xservices\plugins\SocialSharing$1.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\nl\xservices\plugins\SocialSharing$2$1$1.class \
@@ -52,6 +68,7 @@ c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordo
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$23.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$24.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$25.class \
+c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$26.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$3.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$4.class \
 c:\wamp\www\mad9135\photoQR\platforms\android\ant-build\classes\org\apache\cordova\file\FileUtils$5.class \
