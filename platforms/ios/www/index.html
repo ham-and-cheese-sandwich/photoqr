@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<!--<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>   -->
+        <link rel="stylesheet" media="all and (orientation:portrait)" href="css/index.css">  
+		<link rel="stylesheet" media="all and (orientation:landscape)" href="css/landscape.css">     
+        <link href="stylesheets/font-awesome.css" rel="stylesheet" type="text/css" />
+ 
+        <title>PhotoQR</title>
+    </head>
+    <body>
+        <div class="app"> 
+            
+            <div id="loader" class="bubblingG">
+                        <span id="bubblingG_1">
+                        </span>
+                        <span id="bubblingG_2">
+                        </span>
+                        <span id="bubblingG_3">
+                        </span>
+            </div>
+            
+            <div id="menu" class="visible">
+            	<header>
+                    <h1>Photo<span id="headerwrd">Bitches</span></h1>  
+                    <h3>Share photos simply using QR code</h3>                
+                </header> 
+                <div class="maincontainer">
+                    <button id="takePicture" class="homebutton">
+                    	<i class="icon-camera-retro icon-3x"></i>
+                        <br>
+                        Take a Picture
+                    </button> 
+                   
+                    <button id="getPicture" class="homebutton">
+                        <i class="icon-qrcode icon-3x"></i>
+                        <br>
+                        Get a Picture
+                    </button>
+                    
+                    <button id="albumPicture" class="homebutton">
+                        <i class="icon-picture icon-3x"></i>
+                        <br>
+                        Downloaded Photos
+                    </button>
+                    
+                    <button id="prevPicture" class="homebutton">
+                        <i class="icon-time  icon-3x"></i>
+                        <br>
+                        Uploaded Photos
+                    </button>  
+                </div>
+           		 
+            </div>
+                
+            <div id='addingNew' class="hidden">  
+            	<header id="navheader">
+                    <h2>Photo<span id="headerwrd">Bitches</span></h2>
+                    <h4>Take Picture</h4>
+                     <a class = "back icon-arrow-left left" ></a>                  
+                </header> 
+                <div class="container">
+                    <img id="myImage" src=""/>
+                    <button id="takePictureAgain" class="button">Retake Picture</button>
+                    <button id="uploadPicture" class="button">Upload and Share Picture</button>
+                    
+                </div>        
+            </div>
+            
+            <div id='photoAlbum' class="hidden">  
+            	<header id="navheader">
+                    <h2>Photo<span id="headerwrd">Bitches</span></h2>
+                    <a class = "back icon-arrow-left left" ></a>
+                    <h4>Downloaded Photos</h4>
+                                      
+                </header> 
+                <div class="container">
+                    <ul id="picList">
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div id='showPicture' class="hidden">  
+            	<header id="navheader">
+                    <h2>Photo<span id="headerwrd">Bitches</span></h2>
+                     <a class = " icon-arrow-left left" id="backshow"></a> 
+                    <h4>View Photo</h4>                 
+                </header> 
+                <div id='frame' class="container">
+                    
+                </div>
+                
+                <div id="shareArea">
+                </div>
+            </div>
+            
+            <div id='picHistory' class="hidden">  
+            	<header id="navheader">
+                    <h2>Photo<span id="headerwrd">Bitches</span></h2>
+                     <a class = "back icon-arrow-left left" ></a> 
+                    <h4>Uploaded Photos</h4>                 
+                </header> 
+                <div class="container">
+                    <ul id="historyList">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+    </body>
+</html>
