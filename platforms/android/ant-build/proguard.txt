@@ -1,5 +1,5 @@
 # view AndroidManifest.xml #generated:6
--keep class com.algonquincollege.photoQR.Alpha.PhotoQR { <init>(...); }
+-keep class com.algonquincollege.photoQR1.PhotoQR { <init>(...); }
 
 # view AndroidManifest.xml #generated:12
 -keep class com.google.zxing.client.android.CaptureActivity { <init>(...); }
